@@ -8,4 +8,6 @@
 \contentsline {subsection}{\numberline {3.2}}{7}{}%
 \contentsline {subsection}{\numberline {3.3}}{7}{}%
 \contentsline {subsection}{\numberline {3.4}}{7}{}%
+\contentsline {subsection}{\numberline {3.5}}{8}{}%
+\contentsline {subsection}{\numberline {3.6}}{9}{}%
 \contentsline {section}{\numberline {4}Assignment 4}{10}{}%

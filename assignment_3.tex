@@ -28,95 +28,196 @@ Equation of motion for the case that the rotation around the vertical bar is not
 
 
 \subsection{}
+% \begin{equation}
+%     \begin{split}
+%         &-c{\left(L\mathrm{\dot{\theta}}+\mathrm{\dot{\theta}}x_{2}\cos\left(\beta \right)-\mathrm{\dot{\phi}}x_{1}\cos\left(\phi \right)+L\mathrm{\dot{\theta}}\cos\left(\beta \right)-\mathrm{\dot{\theta}}x_{1}\cos\left(\phi \right)\sin\left(\beta \right)\right)}^2-\\
+%         &c{x_{1}}^2{\sin\left(\phi \right)}^2{\left(\mathrm{\dot{\theta}}+\mathrm{\dot{\phi}}\sin\left(\beta \right)\right)}^2-c{\mathrm{\dot{\phi}}}^2{x_{1}}^2{\cos\left(\beta \right)}^2{\sin\left(\phi \right)}^2 
+%     \end{split}
+% \end{equation}
+
+% To find the whole work done by this force distribution we have to integrate it:
+
+% $x_1$ goes from -L to 0 and $x_2$ goes from -L/2 to L/2.
+
+% \begin{equation}
+%     \begin{split}
+%         &-c\int_{-L}^0\int_{-\frac{L}{2}}^{\frac{L}{2}}
+%         \underbrace{\left[{\left(L\mathrm{\dot{\theta}}+\mathrm{\dot{\theta}}x_{2}\cos\left(\beta \right)-\mathrm{\dot{\phi}}x_{1}\cos\left(\phi \right)+L\mathrm{\dot{\theta}}\cos\left(\beta \right)-\mathrm{\dot{\theta}}x_{1}\cos\left(\phi \right)\sin\left(\beta \right)\right)}^2\right]}_{\text{A}}
+%         dx_2dx_1\\
+%         &-c\int_{-L}^0\int_{-\frac{L}{2}}^{\frac{L}{2}}
+%         \underbrace{\left[{x_{1}}^2\left({\sin\left(\phi \right)}^2{\left(\mathrm{\dot{\theta}}+\mathrm{\dot{\phi}}\sin\left(\beta \right)\right)}^2+{\mathrm{\dot{\phi}}}^2{\cos\left(\beta \right)}^2{\sin\left(\phi \right)}^2\right)\right]}_{\text{B}}
+%          dx_2dx_1
+%     \end{split}
+% \end{equation}
+
+% Starting with the integration of A:
+
+
+
+% \begin{equation}
+%     \begin{split}
+%         &-c\int_{-L}^0
+%         \left[\frac{1}{3\dot\theta\cos(\beta)}{\left(L\mathrm{\dot{\theta}}+\mathrm{\dot{\theta}}x_{2}\cos\left(\beta \right)-\mathrm{\dot{\phi}}x_{1}\cos\left(\phi \right)+L\mathrm{\dot{\theta}}\cos\left(\beta \right)-\mathrm{\dot{\theta}}x_{1}\cos\left(\phi \right)\sin\left(\beta \right)\right)}^3\right]
+%         _{-\frac{L}{2}}^\frac{L}{2}dx_1 =
+%     \end{split}
+% \end{equation}
+
+% \begin{equation}
+%     \begin{split}
+%         &-c\int_{-L}^0
+%         \left[\frac{1}{3\dot\theta\cos(\beta)}{\left(L\mathrm{\dot{\theta}}+\mathrm{\dot{\theta}}\frac{L}{2}\cos\left(\beta \right)-\mathrm{\dot{\phi}}x_{1}\cos\left(\phi \right)+L\mathrm{\dot{\theta}}\cos\left(\beta \right)-\mathrm{\dot{\theta}}x_{1}\cos\left(\phi \right)\sin\left(\beta \right)\right)}^3\right]
+%         dx_1\\
+%         & +c\int_{-L}^0
+%         \left[\frac{1}{3\dot\theta\cos(\beta)}{\left(L\mathrm{\dot{\theta}}-\mathrm{\dot{\theta}}\frac{L}{2}\cos\left(\beta \right)-\mathrm{\dot{\phi}}x_{1}\cos\left(\phi \right)+L\mathrm{\dot{\theta}}\cos\left(\beta \right)-\mathrm{\dot{\theta}}x_{1}\cos\left(\phi \right)\sin\left(\beta \right)\right)}^3\right]
+%         dx_1
+%     \end{split}
+% \end{equation}
+
+% Which can be summarized as
+
+% \begin{equation}
+%     \begin{split}
+%         &-\frac{c}{3\dot\theta\cos(\beta)}\int_{-L}^0
+%         \left(L\mathrm{\dot\theta}-x_{1}\cos\left(\phi \right)\left(\mathrm{\dot\phi}+\mathrm{\dot\theta\sin(\beta)}\right)
+%         +\frac{L\mathrm{\dot\theta}\cos\left(\beta \right)}{2}\right)^3\\
+%         &-\left(L\mathrm{\dot\theta}-x_{1}\cos\left(\phi \right)\left(\mathrm{\dot\phi}+\mathrm{\dot\theta\sin(\beta)}\right)+\frac{3L\mathrm{\dot\theta}\cos\left(\beta \right)}{2}\right)^3dx_1 =
+%     \end{split}
+% \end{equation}
+
+
+% \begin{equation}
+%     \begin{split}
+%         \frac{c}{3\dot\theta\cos(\beta)}\frac{1}{\cos\left(\phi \right)\left(\mathrm{\dot\phi}+\mathrm{\dot\theta\sin(\beta)}\right)}&
+%         \left(\left[\left(L\mathrm{\dot\theta}-x_{1}\cos\left(\phi \right)\left(\mathrm{\dot\phi}+\mathrm{\dot\theta\sin(\beta)}\right)
+%         +\frac{L\mathrm{\dot\theta}\cos\left(\beta \right)}{2}\right)^4\right]_{-L}^0\right.\\
+%         &\left.-\left[\left(L\mathrm{\dot\theta}-x_{1}\cos\left(\phi \right)\left(\mathrm{\dot\phi}+\mathrm{\dot\theta\sin(\beta)}\right)+\frac{3L\mathrm{\dot\theta}\cos\left(\beta \right)}{2}\right)^4\right]_{-L}^0\right) =
+%     \end{split}
+% \end{equation}
+
+% Which finally yields:
+% \begin{equation}
+%     \begin{split}
+%         \frac{c}{3\dot\theta\cos(\beta)}*\frac{1}{\cos\left(\phi \right)\left(\mathrm{\dot\phi}+\mathrm{\dot\theta\sin(\beta)}\right)}*&\left(\left(L\mathrm{\dot\theta}+\frac{L\mathrm{\dot\theta}\cos\left(\beta \right)}{2}\right)^4\right.\\
+%         &-\left(L\mathrm{\dot\theta}+\frac{3L\mathrm{\dot\theta}\cos\left(\beta \right)}{2}\right)^4 -\\
+%         &-\left(L\mathrm{\dot\theta}+L\cos\left(\phi \right)\left(\mathrm{\dot\phi}+\mathrm{\dot\theta\sin(\beta)}\right)
+%         +\frac{L\mathrm{\dot\theta}\cos\left(\beta \right)}{2}\right)^4\\
+%         &\left.+\left(L\mathrm{\dot\theta}+L\cos\left(\phi \right)\left(\mathrm{\dot\phi}+\mathrm{\dot\theta\sin(\beta)}\right)+\frac{3L\mathrm{\dot\theta}\cos\left(\beta \right)}{2}\right)^4\right)
+%     \end{split}
+% \end{equation}
+
+% Which can be simplified again to:
+
+% \begin{equation}
+%     \begin{split}
+%         \frac{c}{3\dot\theta\cos(\beta)}*\frac{1}{\cos\left(\phi \right)\left(\mathrm{\dot\phi}+\mathrm{\dot\theta\sin(\beta)}\right)}*&\left({\left(L\mathrm{\dot\theta}+\frac{3L\mathrm{\dot\theta}\cos\left(\beta \right)}{2}+L\cos\left(\phi \right)\left(\mathrm{\dot\phi}+\mathrm{\dot\theta}\sin\left(\beta \right)\right)\right)}^4-\right.\\
+%         &\left(L\mathrm{\dot\theta}+\frac{L\mathrm{\dot\theta}\cos\left(\beta \right)}{2}+L\cos\left(\phi \right)\left(\mathrm{\dot\phi}+\mathrm{\dot\theta}\sin\left(\beta \right)\right)\right)^4+\\
+%         &\left(L\mathrm{\dot\theta}+\frac{L\mathrm{\dot\theta}\cos\left(\beta \right)}{2}\right)^4-\\
+%         &\left.\left(L\mathrm{\dot\theta}+\frac{3L\mathrm{\dot\theta}\cos\left(\beta \right)}{2}\right)^4\right) = A
+%     \end{split}
+% \end{equation}
+
+
+% Analogous for B:
+
+% \begin{equation}
+%     \begin{split}
+%         &-c\int_{-L}^0\int_{-\frac{L}{2}}^{\frac{L}{2}}
+%         \underbrace{\left[{x_{1}}^2\left({\sin\left(\phi \right)}^2{\left(\mathrm{\dot{\theta}}+\mathrm{\dot{\phi}}\sin\left(\beta \right)\right)}^2+{\mathrm{\dot{\phi}}}^2{\cos\left(\beta \right)}^2{\sin\left(\phi \right)}^2\right)\right]dx_2dx_1}_{\text{B}} \overset{B \neq B(x_2)}{=} \\
+%         &-cL\int_{-L}^0
+%         \left[{x_{1}}^2\left({\sin\left(\phi \right)}^2{\left(\mathrm{\dot{\theta}}+\mathrm{\dot{\phi}}\sin\left(\beta \right)\right)}^2+{\mathrm{\dot{\phi}}}^2{\cos\left(\beta \right)}^2{\sin\left(\phi \right)}^2\right)\right]dx_1 = \\
+%         &-\frac{cL}{3}\left({\sin\left(\phi \right)}^2{\left(\mathrm{\dot{\theta}}+\mathrm{\dot{\phi}}\sin\left(\beta \right)\right)}^2+{\mathrm{\dot{\phi}}}^2{\cos\left(\beta \right)}^2{\sin\left(\phi \right)}^2\right)\left[x_1^3\right]_{-L}^0 = \\
+%         &-\frac{cL^4}{3}\left({\sin\left(\phi \right)}^2{\left(\mathrm{\dot{\theta}}+\mathrm{\dot{\phi}}\sin\left(\beta \right)\right)}^2+{\mathrm{\dot{\phi}}}^2{\cos\left(\beta \right)}^2{\sin\left(\phi \right)}^2\right)
+%     \end{split}
+% \end{equation}
+
+% And to bring the ring to Mordor:
+
+% $A + B = W =$
+
+% \begin{equation}
+%     \begin{split}
+%         &-\frac{c}{3\mathrm{\dot\theta}{\cos\left(\beta \right)}^2\left(\mathrm{\dot\phi}+\mathrm{\dot\theta}\sin\left(\beta \right)\right)}*\left(\left(L\mathrm{\dot\theta}+\frac{L\mathrm{\dot\theta}\cos\left(\beta \right)}{2}+L\cos\left(\phi \right)\left(\mathrm{\dot\phi}+\mathrm{\dot\theta}\sin\left(\beta \right)\right)\right)^4\right.\\
+%         &\left.-{\left(L\mathrm{\dot\theta}+\frac{3L\mathrm{\dot\theta}\cos\left(\beta \right)}{2}+L\cos\left(\phi \right)\left(\mathrm{\dot\phi}+\mathrm{\dot\theta}\sin\left(\beta \right)\right)\right)}^4-{\left(L\mathrm{\dot\theta}+\frac{L\mathrm{\dot\theta}\cos\left(\beta \right)}{2}\right)}^4+{\left(L\mathrm{\dot\theta}+\frac{3L\mathrm{\dot\theta}\cos\left(\beta \right)}{2}\right)}^4\right)
+%     \end{split}
+% \end{equation}
+
+After matlab integration of the work per area we get for the work
+
 \begin{equation}
     \begin{split}
-        &-c{\left(L\mathrm{\dot{\theta}}+\mathrm{\dot{\theta}}x_{2}\cos\left(\beta \right)-\mathrm{\dot{\phi}}x_{1}\cos\left(\phi \right)+L\mathrm{\dot{\theta}}\cos\left(\beta \right)-\mathrm{\dot{\theta}}x_{1}\cos\left(\phi \right)\sin\left(\beta \right)\right)}^2-\\
-        &c{x_{1}}^2{\sin\left(\phi \right)}^2{\left(\mathrm{\dot{\theta}}+\mathrm{\dot{\phi}}\sin\left(\beta \right)\right)}^2-c{\mathrm{\dot{\phi}}}^2{x_{1}}^2{\cos\left(\beta \right)}^2{\sin\left(\phi \right)}^2 
+        &W = \\
+        &\frac{L^4\left(c{\left(\mathrm{\dot\theta}+\mathrm{\dot\phi}\sin\left(\beta \right)\right)}^2\left({\cos\left(\phi \right)}^2-1\right)-c{\left(\mathrm{\dot\phi}\cos\left(\phi \right)+\mathrm{\dot\theta}\cos\left(\phi \right)\sin\left(\beta \right)\right)}^2+c{\mathrm{\dot\phi}}^2{\cos\left(\beta \right)}^2\left({\cos\left(\phi \right)}^2-1\right)\right)}{3}\\
+        &-L\left(Lc{\left(L\mathrm{\dot\theta}+L\mathrm{\dot\theta}\cos\left(\beta \right)\right)}^2+\frac{L^3c{\mathrm{\dot\theta}}^2{\cos\left(\beta \right)}^2}{12}\right)-L^3c\left(L\mathrm{\dot\theta}+L\mathrm{\dot\theta}\cos\left(\beta \right)\right)\left(\mathrm{\dot\phi}\cos\left(\phi \right)+\mathrm{\dot\theta}\cos\left(\phi \right)\sin\left(\beta \right)\right)
     \end{split}
 \end{equation}
 
-To find the whole work done by this force distribution we have to integrate it:
 
-$x_1$ goes from -L to 0 and $x_2$ goes from -L/2 to L/2.
-
-\begin{equation}
-    \begin{split}
-        &-c\int_{-L}^0\int_{-\frac{L}{2}}^{\frac{L}{2}}
-        \underbrace{\left[{\left(L\mathrm{\dot{\theta}}+\mathrm{\dot{\theta}}x_{2}\cos\left(\beta \right)-\mathrm{\dot{\phi}}x_{1}\cos\left(\phi \right)+L\mathrm{\dot{\theta}}\cos\left(\beta \right)-\mathrm{\dot{\theta}}x_{1}\cos\left(\phi \right)\sin\left(\beta \right)\right)}^2\right]}_{\text{A}}
-        dx_2dx_1\\
-        &-c\int_{-L}^0\int_{-\frac{L}{2}}^{\frac{L}{2}}
-        \underbrace{\left[{x_{1}}^2\left({\sin\left(\phi \right)}^2{\left(\mathrm{\dot{\theta}}+\mathrm{\dot{\phi}}\sin\left(\beta \right)\right)}^2+{\mathrm{\dot{\phi}}}^2{\cos\left(\beta \right)}^2{\sin\left(\phi \right)}^2\right)\right]}_{\text{B}}
-         dx_2dx_1
-    \end{split}
-\end{equation}
-
-Starting with the integration of A:
-
-
+\subsection{}
+Reminder- The potential energy looks as follows:
 
 \begin{equation}
     \begin{split}
-        &-c\int_{-L}^0
-        \left[\frac{1}{3\dot\theta\cos(\beta)}{\left(L\mathrm{\dot{\theta}}+\mathrm{\dot{\theta}}x_{2}\cos\left(\beta \right)-\mathrm{\dot{\phi}}x_{1}\cos\left(\phi \right)+L\mathrm{\dot{\theta}}\cos\left(\beta \right)-\mathrm{\dot{\theta}}x_{1}\cos\left(\phi \right)\sin\left(\beta \right)\right)}^3\right]
-        _{-\frac{L}{2}}^\frac{L}{2}dx_1 =
+        \frac{LMg\left(2\sin\left(\beta \right)-\cos\left(\beta \right)\cos\left(\phi \right)\right)}{2}
+    \end{split}
+\end{equation}
+\textbf{Case 1: $\Omega$ fixed:} \vspace{0.5cm}\\
+
+The derivative of the potential energy w.r.t. $\theta$ is always 0.
+
+\begin{equation}
+    \begin{split}
+        \frac{\partial V}{\partial \theta} = 0
+    \end{split}
+\end{equation}
+
+The derivative of the potential energy w.r.t. $\phi$ not however:
+
+\begin{equation}
+    \begin{split}
+        \frac{\partial V}{\partial \phi} = \frac{LMg\cos\left(\beta \right)\sin\left(\phi \right)}{2}
+    \end{split}
+\end{equation}
+
+\noindent Equation 12 is only 0 for $\phi = k*\pi$ which makes sense as in this configuration the square has a momentary velocity in horizontal direction which doesn't change the altitude of any body.\vspace{0.5cm}\\
+
+\textbf{Case 2: $\dot\theta$ can change:} \vspace{0.3cm}\\
+
+As V is independent of $\theta$ altogether the result is the same for this case.\vspace{3mm}\\
+
+\noindent \textbf{The equation of motions are:}\vspace{3mm}\\
+\begin{equation}
+    \begin{split}
+        &\frac{L^2M\mathrm{\ddot\phi}}{3}+\frac{L^2m\mathrm{\ddot\phi}}{3}-\frac{L^2m\mathrm{\ddot\phi}{\cos\left(\beta \right)}^2}{3}+\frac{LMg\cos\left(\beta \right)\sin\left(\phi \right)}{2}+\frac{L^2M{\mathrm{\dot\theta}}^2\sin\left(\beta \right)\sin\left(\phi \right)}{2}-\\
+        &\frac{L^2M{\mathrm{\dot\theta}}^2{\cos\left(\beta \right)}^2\cos\left(\phi \right)\sin\left(\phi \right)}{6}+\frac{L^2M{\mathrm{\dot\theta}}^2\cos\left(\beta \right)\sin\left(\beta \right)\sin\left(\phi \right)}{4} \hspace{25mm} \text{for } \phi
     \end{split}
 \end{equation}
 
 \begin{equation}
     \begin{split}
-        &-c\int_{-L}^0
-        \left[\frac{1}{3\dot\theta\cos(\beta)}{\left(L\mathrm{\dot{\theta}}+\mathrm{\dot{\theta}}\frac{L}{2}\cos\left(\beta \right)-\mathrm{\dot{\phi}}x_{1}\cos\left(\phi \right)+L\mathrm{\dot{\theta}}\cos\left(\beta \right)-\mathrm{\dot{\theta}}x_{1}\cos\left(\phi \right)\sin\left(\beta \right)\right)}^3\right]
-        dx_1\\
-        & +c\int_{-L}^0
-        \left[\frac{1}{3\dot\theta\cos(\beta)}{\left(L\mathrm{\dot{\theta}}-\mathrm{\dot{\theta}}\frac{L}{2}\cos\left(\beta \right)-\mathrm{\dot{\phi}}x_{1}\cos\left(\phi \right)+L\mathrm{\dot{\theta}}\cos\left(\beta \right)-\mathrm{\dot{\theta}}x_{1}\cos\left(\phi \right)\sin\left(\beta \right)\right)}^3\right]
-        dx_1
+        &\frac{L^2\mathrm{\ddot\theta}}{12}\left(16M+16m+12M\cos\left(\beta \right)+12m\cos\left(\beta \right)+2M{\cos\left(\beta \right)}^2+4m{\cos\left(\beta \right)}^2-\right.\\
+        &\left.2M{\cos\left(\beta \right)}^2{\cos\left(\phi \right)}^2+12M\cos\left(\phi \right)\sin\left(\beta \right)+6M\cos\left(\beta \right)\cos\left(\phi \right)\sin\left(\beta \right)\right) \hspace{10mm}\text{for } \theta
     \end{split}
 \end{equation}
 
-Which can be summarized as
+Plugging in $\phi = \dot\phi = \ddot\phi = 0$:
 
 \begin{equation}
     \begin{split}
-        &-\frac{c}{3\dot\theta\cos(\beta)}\int_{-L}^0
-        \left(L\mathrm{\dot\theta}-x_{1}\cos\left(\phi \right)\left(\mathrm{\dot\phi}+\mathrm{\dot\theta\sin(\beta)}\right)
-        +\frac{L\mathrm{\dot\theta}\cos\left(\beta \right)}{2}\right)^3\\
-        &-\left(L\mathrm{\dot\theta}-x_{1}\cos\left(\phi \right)\left(\mathrm{\dot\phi}+\mathrm{\dot\theta\sin(\beta)}\right)+\frac{3L\mathrm{\dot\theta}\cos\left(\beta \right)}{2}\right)^3dx_1 =
+        &\phi:\\
+        &0 = 0
     \end{split}
 \end{equation}
-
 
 \begin{equation}
     \begin{split}
-        &\frac{c}{3\dot\theta\cos(\beta)}\frac{1}{\cos\left(\phi \right)\left(\mathrm{\dot\phi}+\mathrm{\dot\theta\sin(\beta)}\right)}
-        \left[\left(L\mathrm{\dot\theta}-x_{1}\cos\left(\phi \right)\left(\mathrm{\dot\phi}+\mathrm{\dot\theta\sin(\beta)}\right)
-        +\frac{L\mathrm{\dot\theta}\cos\left(\beta \right)}{2}\right)^4\right]_{-L}^0\\
-        &-\frac{c}{3\dot\theta\cos(\beta)}\frac{1}{\cos\left(\phi \right)\left(\mathrm{\dot\phi}+\mathrm{\dot\theta\sin(\beta)}\right)}
-        \left[\left(L\mathrm{\dot\theta}-x_{1}\cos\left(\phi \right)\left(\mathrm{\dot\phi}+\mathrm{\dot\theta\sin(\beta)}\right)+\frac{3L\mathrm{\dot\theta}\cos\left(\beta \right)}{2}\right)^4\right]_{-L}^0 =
+        &\theta:\\
+        &\frac{L^2\mathrm{\ddot\theta}}{12}\left(16M+16m+12M\cos\left(\beta \right)+12M\sin\left(\beta \right)+12m\cos\left(\beta \right)+\right.\\
+        &\left.4m{\cos\left(\beta \right)}^2+6M\cos\left(\beta \right)\sin\left(\beta \right)\right) = 0 \Rightarrow \ddot\theta = 0
     \end{split}
 \end{equation}
+As the coefficient of $\ddot\theta$ is constant, the angular acceleration of the vertical shaft has to be 0. This results in a constant angular velocity which recovers the case of a constant $\Omega$.
 
-Which finally yields:
-\begin{equation}
-    \begin{split}
-        &\frac{c}{3\dot\theta\cos(\beta)}\frac{1}{\cos\left(\phi \right)\left(\mathrm{\dot\phi}+\mathrm{\dot\theta\sin(\beta)}\right)}
-        \left(L\mathrm{\dot\theta}
-        +\frac{L\mathrm{\dot\theta}\cos\left(\beta \right)}{2}\right)^4\\
-        &-\frac{c}{3\dot\theta\cos(\beta)}\frac{1}{\cos\left(\phi \right)\left(\mathrm{\dot\phi}+\mathrm{\dot\theta\sin(\beta)}\right)}
-        \left(L\mathrm{\dot\theta}+\frac{3L\mathrm{\dot\theta}\cos\left(\beta \right)}{2}\right)^4 -\\%HERERRERRERRER
-        &-\frac{c}{3\dot\theta\cos(\beta)}\frac{1}{\cos\left(\phi \right)\left(\mathrm{\dot\phi}+\mathrm{\dot\theta\sin(\beta)}\right)}
-        \left(L\mathrm{\dot\theta}+L\cos\left(\phi \right)\left(\mathrm{\dot\phi}+\mathrm{\dot\theta\sin(\beta)}\right)
-        +\frac{L\mathrm{\dot\theta}\cos\left(\beta \right)}{2}\right)^4\\
-        &+\frac{c}{3\dot\theta\cos(\beta)}\frac{1}{\cos\left(\phi \right)\left(\mathrm{\dot\phi}+\mathrm{\dot\theta\sin(\beta)}\right)}
-        \left(L\mathrm{\dot\theta}+L\cos\left(\phi \right)\left(\mathrm{\dot\phi}+\mathrm{\dot\theta\sin(\beta)}\right)+\frac{3L\mathrm{\dot\theta}\cos\left(\beta \right)}{2}\right)^4
-    \end{split}
-\end{equation}
-
-
-
-
-
-
-
+\subsection{}
 
 
 
