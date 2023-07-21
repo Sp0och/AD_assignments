@@ -152,15 +152,113 @@ A simple vector that is perpendicular to AC can be gotten by switching the $e_1$
             L\left(\sin\theta_1+\sin\theta_2\right)\\
             -L\left(\cos\theta_1+\cos\theta_2\right)
         \end{pmatrix} = \\
-&\left(L\left(\sin\left(\theta_1\right)+\sin\left(\theta _2\right)\right)\right)\mathrm{\dot x_1}^B+\left(-L\left(\cos\left(\theta _1\right)+\cos\left(\theta _2\right)\right)\right)\mathrm{\dot x_2}^B-L^2\mathrm{\dot\theta}_2\cos\left(\mathrm{\dot\theta}_2\right)\left(\cos\left(\theta _1\right)+\cos\left(\theta _2\right)\right)-\\
-&L^2\mathrm{\dot\theta}_2\sin\left(\mathrm{\dot\theta}_2\right)\left(\sin\left(\theta _1\right)+\sin\left(\theta _2\right)\right)
+        &\left(L\left(\sin\left(\theta _1\right)+\sin\left(\theta _2\right)\right)\right)\mathrm{\dot x_1}^B+\left(-L\left(\cos\left(\theta _1\right)+\cos\left(\theta _2\right)\right)\right)\dot x_2^B-\\
+        &L^2\dot\theta_2\cos\left(\theta _2\right)\left(\cos\left(\theta _1\right)+\cos\left(\theta _2\right)\right)-L^2\dot\theta_2\sin\left(\theta _2\right)\left(\sin\left(\theta _1\right)+\sin\left(\theta _2\right)\right) = 0
     \end{split}
 \end{equation} 
 
 After applying trigonometry:
 
 \begin{equation}
-    \begin{split}           &\left(L\left(\sin\left(\theta_1\right)+\sin\left(\theta _2\right)\right)\right)\mathrm{\dot x_1}^B+\left(-L\left(\cos\left(\theta _1\right)+\cos\left(\theta _2\right)\right)\right)\mathrm{\dot x_2}^B-L^2\mathrm{\dot\theta}_2\cos\left(\mathrm{\dot\theta}_2\right)\left(\cos\left(\theta _1\right)+\cos\left(\theta _2\right)\right)-\\
-&L^2\mathrm{\dot\theta}_2\sin\left(\mathrm{\dot\theta}_2\right)\left(\sin\left(\theta _1\right)+\sin\left(\theta _2\right)\right)
+    \begin{split}           
+        &\left(L\left(\sin\left(\theta _1\right)+\sin\left(\theta _2\right)\right)\right)\mathrm{\dot x_1}^B+\left(-L\left(\cos\left(\theta _1\right)+\cos\left(\theta _2\right)\right)\right)\dot x_2^B-\\
+        &L^2\dot\theta_2\left(\cos\left(\theta _2\right)\cos\left(\theta _1\right)+\sin\left(\theta _2\right)\sin\left(\theta _1\right)+1\right) = 0
     \end{split}
 \end{equation}
+
+To simplify the notation I will refer to $\sin \theta_1$ as $s_1$ and $\sin \theta_2$ as $s_2$:
+
+\begin{equation}
+    \begin{split}           
+        &L\dot x_1^B\left(s_1+s_2\right)-L\dot x_2^B\left(c_1+c_2\right)-
+        L^2\dot\theta_2^2\left(c_2c_1+s_2s_1 + 1\right) = 0
+    \end{split}
+\end{equation}
+
+Dividing by L:
+
+\begin{equation}
+    \begin{split}           
+        &\dot x_1^B\left(s_1+s_2\right)-\dot x_2^B\left(c_1+c_2\right)-
+        L\dot\theta_2^2\left(c_2c_1+s_2s_1 + 1\right) = 0
+    \end{split}
+\end{equation}
+
+With the generalized coordinates $q = [x_1^B,x_2^B,\theta_1,\theta_2]$
+
+Writing down the coefficients of the non-holonomic constraint:
+
+\begin{equation}
+    \begin{split}
+        &a_1 = s_1 + s_2\\
+        &a_2 = -\left(c_1 + c_2\right)\\
+        &a_3 = 0\\
+        &a_4 = -L\left(1 + s_1s_2 + c_1c_2\right)\\
+        &b = 0
+    \end{split}
+\end{equation}
+
+\clearpage
+To check for the exact velocity form we want to proof that there can't exist a $C(q) \neq 0$ for which holds:
+
+\begin{equation}
+    \begin{split}
+        \frac{\partial(Cb)}{\partial q_i} = \frac{\partial(Ca_1)}{\partial t}\quad \text{ and } \quad \frac{\partial(Ca_i)}{\partial q_k} = \frac{\partial(Ca_k)}{\partial q_i} \quad \text{ for all the gen. coord. }
+    \end{split}
+\end{equation}
+
+q1-q3:
+
+\begin{equation}
+    \begin{split}
+        &\frac{\partial(Ca_1)}{\partial \theta_1} = 0 \Rightarrow C*c_1 + \frac{\partial C}{\partial \theta_1}(s1 + s2) = 0\\
+        &\Rightarrow \frac{c_1}{s1+s2} + \frac{1}{C}\frac{d C}{d \theta_1} = 0 \Rightarrow \int \frac{1}{C}dC = - \int \frac{c_1}{s_1+s_2}d\theta_1\\
+        &\Rightarrow lnC = \frac{D}{s_1+s_2} + D \Rightarrow C = \frac{D}{s_1+s_2} \quad \text{ where the integration const. D was updated}\\
+        &\Rightarrow C = \frac{D(x_1^B,x_2^B,\theta_2)}{s1 + s2}
+    \end{split}
+\end{equation}
+
+q1 - q4:
+
+\begin{equation}
+    \begin{split}
+        \frac{\partial C a_1}{\partial \theta_2} = \underbrace{\frac{\partial C a_4}{\partial x_1^B}}_{0} = 0 \Rightarrow \frac{\partial D}{\partial \theta_2} = 0 \Rightarrow C = \frac{D(x_1^B,x_2^B)}{s1 + s2}
+    \end{split}
+\end{equation}
+
+q1 - q2:
+
+\begin{equation}
+    \begin{split}
+        &\frac{\partial C a_1}{\partial x_2^B} = \frac{\partial C a_2}{\partial x_1^B}\Rightarrow \frac{\partial C}{\partial x_2^B}\left(s_1+s_2\right) = \frac{\partial C}{\partial x_1^B}\left(c_1+c_2\right) \Rightarrow \frac{\partial C}{\partial x_2^B} = \frac{\partial C}{\partial x_1^B}\frac{c_1+c_2}{s_1+s_2}\\
+        &\text{Remembering that } D = D(x_1^B,x_2^B) \Rightarrow D = const.\\
+        & \Rightarrow C = \frac{D}{s_1 + s_2} \text{ where D const.}
+    \end{split}
+\end{equation}
+
+q2 - q3:
+
+\begin{equation}
+    \begin{split}
+        &\frac{\partial C a_1}{\partial x_2^B}  = 0 \Rightarrow D\frac{\partial\frac{
+        (c_1+c_2)}{s_1+s_2}}{\partial \theta_1} = 0\\
+        &D\frac{\partial \frac{c_1}{s_1+s_2}}{\partial\theta_1} = -\frac{Ds_1}{s_1+s_2} - \frac{Dc_1^2}{(s_1+s_2)^2} = -D\frac{s_1(s_1+s_2) - c_1^2}{(s_1+s_2)^2}
+    \end{split}
+\end{equation}
+
+\begin{equation}
+    \begin{split}
+        &D\frac{\partial \frac{c_2}{s_1+s_2}}{\partial\theta_1} = -D\frac{c_1c_2}{(s_1+s_2)^2}
+    \end{split}
+\end{equation}
+
+Which leads to:
+
+\begin{equation}
+    \begin{split}
+        -D\frac{c_1^2 + s_1^2 + s_1s_2 + c_1c_2}{(s_1+s_2)^2} \overset{\text{!}}{=} 0
+    \end{split}
+\end{equation}
+
+Which is a contradiction. Therefore this is a non-holonomic constraint.
+
