@@ -1,3 +1,4 @@
+\subsection{Hamilton's Principle}
 This assignment asks to get the equations of motion using the Hamilton Principle:
 \begin{equation}
     \begin{split}
@@ -63,10 +64,47 @@ We consider w our variable instead of v.
     \end{split}
 \end{equation}
 
+\begin{equation}
+    \begin{split}
+        \frac{\partial L }{\partial w'}= 0, \quad \frac{\partial}{\partial x}(\frac{\partial L}{\partial  w''}) = -EI(x)'
+    \end{split}
+\end{equation}
+
+\begin{equation}
+    \begin{split}
+        \frac{\partial}{\partial t}(\frac{\partial L}{\partial \dot w'})= 2\rho I(x) \ddot w' 
+    \end{split}
+\end{equation}
+
 Therefore the green part comes to:
+
+\begin{equation}
+    \begin{split}
+        -E\frac{\partial ^2}{\partial x^2}I(x) - 2 \rho A(x)\ddot w + 2\rho I(x) \ddot w'' + 2\rho I(x)'\ddot w'+ p(x,t) = 0
+    \end{split}
+\end{equation}
+
+\begin{equation}
+    \begin{split}
+        -E\frac{\partial ^2}{\partial x^2}I(x) - 2 \rho A(x)\ddot w + 2\rho I(x) \ddot w'' + 2\rho I(x)'\ddot w'+ p(x,t) = 0
+    \end{split}
+\end{equation}
 
 While for the red we get:
 
+\begin{equation}
+    \begin{split}
+        \left[\vphantom{\int}EI(x)' - 2\rho I(x) \ddot w'\right] \delta w = 0, \quad x = 0,L
+    \end{split}
+\end{equation}
+
 And for lastly for the blue:
 
+\begin{equation}
+    \begin{split}
+        E I(x) \delta w' = 0, \quad x = 0,L
+    \end{split}
+\end{equation}
+
+\subsection{Analysis}
 
