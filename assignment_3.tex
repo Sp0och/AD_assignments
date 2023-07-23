@@ -1,163 +1,299 @@
-\subsection{}
-Lagrange equations:
+A few notes before starting this assignment:
+
+I'm considering three frames. 
+
+The first one is the inertial frame. It is in A with the first axis straight up, the second right and the third into the plane of the image.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.5]{images/inertial_frame.png}
+    \caption{Inertial Frame}
+    %label always in the end
+    \label{fig:inertial_frame}
+\end{figure}
+
+\noindent The second one is located at the same position but rotating with Omega. I will call it the vertical frame.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.5]{images/vertical_frame.png}
+    \caption{Vertical Frame}
+    %label always in the end
+    \label{fig:vertical_frame}
+\end{figure}
+\clearpage %HERE
+
+The third one that is called rod frame is the same as the vertical frame but with a constant rotation of $\beta$ around the negative $e3_v$ axis.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.5]{images/rod_frame.png}
+    \caption{Rod Frame}
+    %label always in the end
+    \label{fig:rod_frame}
+\end{figure}
+
+The last frame is the square frame which relative to the rod frame is also rotation with $\phi$:
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.5]{images/square_frame.png}
+    \caption{Square Frame}
+    %label always in the end
+    \label{fig:square_frame}
+\end{figure}
+
+
+\subsection{Kinetic and Potential Energy}
+\subsubsection{Vertical Shaft}
+As the vertical bar rotates around the thing axis and is static regarding the height of it's CoM the contribution to the energ is 0.
+
 \begin{equation}
     \begin{split}
-        &\frac{L^2M\mathrm{\ddot{\phi}}}{3}+\frac{L^2m\mathrm{\ddot{\phi}}}{3}-\frac{L^2m\mathrm{\ddot{\phi}}{\cos\left(\beta \right)}^2}{3}+\frac{LMg\cos\left(\beta \right)\sin\left(\phi \right)}{2}+\frac{L^2M\Omega ^2\sin\left(\beta \right)\sin\left(\phi \right)}{2}+\\
-        &\frac{L^2M\Omega ^2\cos\left(\beta \right)\sin\left(\beta \right)\sin\left(\phi \right)}{4}-\frac{L^2M\Omega ^2{\cos\left(\beta \right)}^2\cos\left(\phi \right)\sin\left(\phi \right)}{6} = 0
+        T_\text{vertical bar} = V_\text{vertical bar} = 0
     \end{split}
 \end{equation}
-\subsection{}
-This can be reformulated for the differential equation of $\ddot{\phi}$:
+\subsubsection{Horizontal Bar}
+\textbf{Note: } I will refer to the horizontal bar as bar and to the tilted bar as rod.
+
+As point A which is part of the bar is not moving we can simply consider the rotational part w.r.t. to this fixed point A.:
 
 \begin{equation}
     \begin{split}
-        &\ddot{\phi} \left(\frac{L^2(M+m)}{3} - \frac{L^2m\cos(\beta)^2}{3}\right) + \sin(\phi)\left(\frac{LMg\cos(\beta)}{2} + \frac{L^2M\Omega^2\sin(\beta)}{2} + \frac{L^2M\Omega^2\cos(\beta)\sin(\beta)}{4}\right) - \\
-        &\frac{L^2M\Omega^2\cos(\beta)^2\cos(\phi)\sin(\phi)}{6} = 0
-    \end{split}
-\end{equation}
-
-\subsection{}
-Equation of motion for the case that the rotation around the vertical bar is not constant:
-
-\begin{equation}
-    \begin{split}
-        &\frac{L^2\mathrm{\ddot{\theta}}\left(16M+16m+12M\cos\left(\beta \right)+12m\cos\left(\beta \right)+2M{\cos\left(\beta \right)}^2+4m{\cos\left(\beta \right)}^2-2M{\cos\left(\beta \right)}^2{\cos\left(\phi \right)}^2\right)}{12}+\\
-        &\frac{L^2\mathrm{\ddot{\theta}}\left(12M\cos\left(\phi \right)\sin\left(\beta \right)+6M\cos\left(\beta \right)\cos\left(\phi \right)\sin\left(\beta \right)\right)}{12}
-    \end{split}
-\end{equation}
-
-
-\subsection{}
-% \begin{equation}
-%     \begin{split}
-%         &-c{\left(L\mathrm{\dot{\theta}}+\mathrm{\dot{\theta}}x_{2}\cos\left(\beta \right)-\mathrm{\dot{\phi}}x_{1}\cos\left(\phi \right)+L\mathrm{\dot{\theta}}\cos\left(\beta \right)-\mathrm{\dot{\theta}}x_{1}\cos\left(\phi \right)\sin\left(\beta \right)\right)}^2-\\
-%         &c{x_{1}}^2{\sin\left(\phi \right)}^2{\left(\mathrm{\dot{\theta}}+\mathrm{\dot{\phi}}\sin\left(\beta \right)\right)}^2-c{\mathrm{\dot{\phi}}}^2{x_{1}}^2{\cos\left(\beta \right)}^2{\sin\left(\phi \right)}^2 
-%     \end{split}
-% \end{equation}
-
-% To find the whole work done by this force distribution we have to integrate it:
-
-% $x_1$ goes from -L to 0 and $x_2$ goes from -L/2 to L/2.
-
-% \begin{equation}
-%     \begin{split}
-%         &-c\int_{-L}^0\int_{-\frac{L}{2}}^{\frac{L}{2}}
-%         \underbrace{\left[{\left(L\mathrm{\dot{\theta}}+\mathrm{\dot{\theta}}x_{2}\cos\left(\beta \right)-\mathrm{\dot{\phi}}x_{1}\cos\left(\phi \right)+L\mathrm{\dot{\theta}}\cos\left(\beta \right)-\mathrm{\dot{\theta}}x_{1}\cos\left(\phi \right)\sin\left(\beta \right)\right)}^2\right]}_{\text{A}}
-%         dx_2dx_1\\
-%         &-c\int_{-L}^0\int_{-\frac{L}{2}}^{\frac{L}{2}}
-%         \underbrace{\left[{x_{1}}^2\left({\sin\left(\phi \right)}^2{\left(\mathrm{\dot{\theta}}+\mathrm{\dot{\phi}}\sin\left(\beta \right)\right)}^2+{\mathrm{\dot{\phi}}}^2{\cos\left(\beta \right)}^2{\sin\left(\phi \right)}^2\right)\right]}_{\text{B}}
-%          dx_2dx_1
-%     \end{split}
-% \end{equation}
-
-% Starting with the integration of A:
-
-
-
-% \begin{equation}
-%     \begin{split}
-%         &-c\int_{-L}^0
-%         \left[\frac{1}{3\dot\theta\cos(\beta)}{\left(L\mathrm{\dot{\theta}}+\mathrm{\dot{\theta}}x_{2}\cos\left(\beta \right)-\mathrm{\dot{\phi}}x_{1}\cos\left(\phi \right)+L\mathrm{\dot{\theta}}\cos\left(\beta \right)-\mathrm{\dot{\theta}}x_{1}\cos\left(\phi \right)\sin\left(\beta \right)\right)}^3\right]
-%         _{-\frac{L}{2}}^\frac{L}{2}dx_1 =
-%     \end{split}
-% \end{equation}
-
-% \begin{equation}
-%     \begin{split}
-%         &-c\int_{-L}^0
-%         \left[\frac{1}{3\dot\theta\cos(\beta)}{\left(L\mathrm{\dot{\theta}}+\mathrm{\dot{\theta}}\frac{L}{2}\cos\left(\beta \right)-\mathrm{\dot{\phi}}x_{1}\cos\left(\phi \right)+L\mathrm{\dot{\theta}}\cos\left(\beta \right)-\mathrm{\dot{\theta}}x_{1}\cos\left(\phi \right)\sin\left(\beta \right)\right)}^3\right]
-%         dx_1\\
-%         & +c\int_{-L}^0
-%         \left[\frac{1}{3\dot\theta\cos(\beta)}{\left(L\mathrm{\dot{\theta}}-\mathrm{\dot{\theta}}\frac{L}{2}\cos\left(\beta \right)-\mathrm{\dot{\phi}}x_{1}\cos\left(\phi \right)+L\mathrm{\dot{\theta}}\cos\left(\beta \right)-\mathrm{\dot{\theta}}x_{1}\cos\left(\phi \right)\sin\left(\beta \right)\right)}^3\right]
-%         dx_1
-%     \end{split}
-% \end{equation}
-
-% Which can be summarized as
-
-% \begin{equation}
-%     \begin{split}
-%         &-\frac{c}{3\dot\theta\cos(\beta)}\int_{-L}^0
-%         \left(L\dot\theta-x_{1}\cos\left(\phi \right)\left(\mathrm{\dot\phi}+\mathrm{\dot\theta\sin(\beta)}\right)
-%         +\frac{L\dot\theta\cos\left(\beta \right)}{2}\right)^3\\
-%         &-\left(L\dot\theta-x_{1}\cos\left(\phi \right)\left(\mathrm{\dot\phi}+\mathrm{\dot\theta\sin(\beta)}\right)+\frac{3L\dot\theta\cos\left(\beta \right)}{2}\right)^3dx_1 =
-%     \end{split}
-% \end{equation}
-
-
-% \begin{equation}
-%     \begin{split}
-%         \frac{c}{3\dot\theta\cos(\beta)}\frac{1}{\cos\left(\phi \right)\left(\mathrm{\dot\phi}+\mathrm{\dot\theta\sin(\beta)}\right)}&
-%         \left(\left[\left(L\dot\theta-x_{1}\cos\left(\phi \right)\left(\mathrm{\dot\phi}+\mathrm{\dot\theta\sin(\beta)}\right)
-%         +\frac{L\dot\theta\cos\left(\beta \right)}{2}\right)^4\right]_{-L}^0\right.\\
-%         &\left.-\left[\left(L\dot\theta-x_{1}\cos\left(\phi \right)\left(\mathrm{\dot\phi}+\mathrm{\dot\theta\sin(\beta)}\right)+\frac{3L\dot\theta\cos\left(\beta \right)}{2}\right)^4\right]_{-L}^0\right) =
-%     \end{split}
-% \end{equation}
-
-% Which finally yields:
-% \begin{equation}
-%     \begin{split}
-%         \frac{c}{3\dot\theta\cos(\beta)}*\frac{1}{\cos\left(\phi \right)\left(\mathrm{\dot\phi}+\mathrm{\dot\theta\sin(\beta)}\right)}*&\left(\left(L\dot\theta+\frac{L\dot\theta\cos\left(\beta \right)}{2}\right)^4\right.\\
-%         &-\left(L\dot\theta+\frac{3L\dot\theta\cos\left(\beta \right)}{2}\right)^4 -\\
-%         &-\left(L\dot\theta+L\cos\left(\phi \right)\left(\mathrm{\dot\phi}+\mathrm{\dot\theta\sin(\beta)}\right)
-%         +\frac{L\dot\theta\cos\left(\beta \right)}{2}\right)^4\\
-%         &\left.+\left(L\dot\theta+L\cos\left(\phi \right)\left(\mathrm{\dot\phi}+\mathrm{\dot\theta\sin(\beta)}\right)+\frac{3L\dot\theta\cos\left(\beta \right)}{2}\right)^4\right)
-%     \end{split}
-% \end{equation}
-
-% Which can be simplified again to:
-
-% \begin{equation}
-%     \begin{split}
-%         \frac{c}{3\dot\theta\cos(\beta)}*\frac{1}{\cos\left(\phi \right)\left(\mathrm{\dot\phi}+\mathrm{\dot\theta\sin(\beta)}\right)}*&\left({\left(L\dot\theta+\frac{3L\dot\theta\cos\left(\beta \right)}{2}+L\cos\left(\phi \right)\left(\mathrm{\dot\phi}+\dot\theta\sin\left(\beta \right)\right)\right)}^4-\right.\\
-%         &\left(L\dot\theta+\frac{L\dot\theta\cos\left(\beta \right)}{2}+L\cos\left(\phi \right)\left(\mathrm{\dot\phi}+\dot\theta\sin\left(\beta \right)\right)\right)^4+\\
-%         &\left(L\dot\theta+\frac{L\dot\theta\cos\left(\beta \right)}{2}\right)^4-\\
-%         &\left.\left(L\dot\theta+\frac{3L\dot\theta\cos\left(\beta \right)}{2}\right)^4\right) = A
-%     \end{split}
-% \end{equation}
-
-
-% Analogous for B:
-
-% \begin{equation}
-%     \begin{split}
-%         &-c\int_{-L}^0\int_{-\frac{L}{2}}^{\frac{L}{2}}
-%         \underbrace{\left[{x_{1}}^2\left({\sin\left(\phi \right)}^2{\left(\mathrm{\dot{\theta}}+\mathrm{\dot{\phi}}\sin\left(\beta \right)\right)}^2+{\mathrm{\dot{\phi}}}^2{\cos\left(\beta \right)}^2{\sin\left(\phi \right)}^2\right)\right]dx_2dx_1}_{\text{B}} \overset{B \neq B(x_2)}{=} \\
-%         &-cL\int_{-L}^0
-%         \left[{x_{1}}^2\left({\sin\left(\phi \right)}^2{\left(\mathrm{\dot{\theta}}+\mathrm{\dot{\phi}}\sin\left(\beta \right)\right)}^2+{\mathrm{\dot{\phi}}}^2{\cos\left(\beta \right)}^2{\sin\left(\phi \right)}^2\right)\right]dx_1 = \\
-%         &-\frac{cL}{3}\left({\sin\left(\phi \right)}^2{\left(\mathrm{\dot{\theta}}+\mathrm{\dot{\phi}}\sin\left(\beta \right)\right)}^2+{\mathrm{\dot{\phi}}}^2{\cos\left(\beta \right)}^2{\sin\left(\phi \right)}^2\right)\left[x_1^3\right]_{-L}^0 = \\
-%         &-\frac{cL^4}{3}\left({\sin\left(\phi \right)}^2{\left(\mathrm{\dot{\theta}}+\mathrm{\dot{\phi}}\sin\left(\beta \right)\right)}^2+{\mathrm{\dot{\phi}}}^2{\cos\left(\beta \right)}^2{\sin\left(\phi \right)}^2\right)
-%     \end{split}
-% \end{equation}
-
-% And to bring the ring to Mordor:
-
-% $A + B = W =$
-
-% \begin{equation}
-%     \begin{split}
-%         &-\frac{c}{3\dot\theta{\cos\left(\beta \right)}^2\left(\mathrm{\dot\phi}+\dot\theta\sin\left(\beta \right)\right)}*\left(\left(L\dot\theta+\frac{L\dot\theta\cos\left(\beta \right)}{2}+L\cos\left(\phi \right)\left(\mathrm{\dot\phi}+\dot\theta\sin\left(\beta \right)\right)\right)^4\right.\\
-%         &\left.-{\left(L\dot\theta+\frac{3L\dot\theta\cos\left(\beta \right)}{2}+L\cos\left(\phi \right)\left(\mathrm{\dot\phi}+\dot\theta\sin\left(\beta \right)\right)\right)}^4-{\left(L\dot\theta+\frac{L\dot\theta\cos\left(\beta \right)}{2}\right)}^4+{\left(L\dot\theta+\frac{3L\dot\theta\cos\left(\beta \right)}{2}\right)}^4\right)
-%     \end{split}
-% \end{equation}
-
-After matlab integration of the work per area we get for the work
-
-\begin{equation}
-    \begin{split}
-        &W = \\
-        &\frac{L^4\left(c{\left(\dot\theta+\mathrm{\dot\phi}\sin\left(\beta \right)\right)}^2\left({\cos\left(\phi \right)}^2-1\right)-c{\left(\mathrm{\dot\phi}\cos\left(\phi \right)+\dot\theta\cos\left(\phi \right)\sin\left(\beta \right)\right)}^2+c{\mathrm{\dot\phi}}^2{\cos\left(\beta \right)}^2\left({\cos\left(\phi \right)}^2-1\right)\right)}{3}\\
-        &-L\left(Lc{\left(L\dot\theta+L\dot\theta\cos\left(\beta \right)\right)}^2+\frac{L^3c{\dot\theta}^2{\cos\left(\beta \right)}^2}{12}\right)-L^3c\left(L\dot\theta+L\dot\theta\cos\left(\beta \right)\right)\left(\mathrm{\dot\phi}\cos\left(\phi \right)+\dot\theta\cos\left(\phi \right)\sin\left(\beta \right)\right)
+        T_\text{bar} =  \frac{L^2\Omega ^2m}{6}
     \end{split}
 \end{equation}
 
-Which results in the equations of motion:
+As the bar is horizontal on the height of A we have no contribution of the potential energy.
 
 \begin{equation}
     \begin{split}
-        &\frac{L^2M\mathrm{\ddot\phi}}{3}+\frac{2L^4c\left(\mathrm{\dot\phi}+\dot\theta\sin\left(\beta \right)\right)}{3}+\frac{L^2m\mathrm{\ddot\phi}}{3}-\frac{L^2m\mathrm{\ddot\phi}{\cos\left(\beta \right)}^2}{3}+\frac{LMg\cos\left(\beta \right)\sin\left(\phi \right)}{2}+\\
-        &L^4c\dot\theta\cos\left(\phi \right)\left(\cos\left(\beta \right)+1\right)+\frac{L^2M{\dot\theta}^2\sin\left(\beta \right)\sin\left(\phi \right)}{2}-\frac{L^2M{\dot\theta}^2{\cos\left(\beta \right)}^2\cos\left(\phi \right)\sin\left(\phi \right)}{6}+\\
-        &\frac{L^2M{\dot\theta}^2\cos\left(\beta \right)\sin\left(\beta \right)\sin\left(\phi \right)}{4}\hspace{25mm} \text{for } \phi
+        V_\text{bar} = 0
+    \end{split}
+\end{equation}
+
+\subsubsection{Rod}
+As the rod has no static point we will use a superposition of the rotational and translational kinetic energy.
+
+\begin{equation}
+    \begin{split}
+        T_\text{Rod transl} = \frac{L^2\Omega ^2m{\left(\cos\left(\beta \right)+2\right)}^2}{8}
+    \end{split}
+\end{equation}
+For the rotational part considering the moment of inertia of the center of mass we get:
+\begin{equation}
+    \begin{split}
+        T_\text{Rod rot} = \frac{L^2\Omega ^2m{\cos\left(\beta \right)}^2}{24}
+    \end{split}
+\end{equation}
+Which leads to:
+\begin{equation}
+    \begin{split}
+        \Rightarrow T_\text{Rod} = \frac{L^2\Omega ^2m\left({\cos\left(\beta \right)}^2+3\cos\left(\beta \right)+3\right)}{6}
+    \end{split}
+\end{equation}
+
+For the potential energy we have the verical part of the incline of the rod:
+
+\begin{equation}
+    \begin{split}
+        V_\text{Rod} = \frac{L}{2}mg\sin\beta
+    \end{split}
+\end{equation}
+
+\subsubsection{Square Plate}
+As for the rod, first the translational kinetic energy:
+
+\begin{equation}
+    \begin{split}
+        T_\text{square transl} = \frac{M\left({\left(\left(\Omega +\mathrm{\dot\phi}\sin\left(\beta \right)\right)\left(\frac{L\left(\sin\left(\Omega t\right)\sin\left(\phi \right)-\cos\left(\Omega t\right)\cos\left(\phi \right)\sin\left(\beta \right)\right)}{2}-\frac{L\cos\left(\Omega t\right)\cos\left(\beta \right)}{2}\right)-L\Omega \cos\left(\Omega t\right)+\frac{L\mathrm{\dot\phi}\cos\left(\Omega t\right)\cos\left(\beta \right)\left(\sin\left(\beta \right)-\cos\left(\beta \right)\cos\left(\phi \right)\right)}{2}\right)}^2+{\left(\left(\Omega +\mathrm{\dot\phi}\sin\left(\beta \right)\right)\left(\frac{L\left(\cos\left(\Omega t\right)\sin\left(\phi \right)+\sin\left(\Omega t\right)\cos\left(\phi \right)\sin\left(\beta \right)\right)}{2}+\frac{L\sin\left(\Omega t\right)\cos\left(\beta \right)}{2}\right)+L\Omega \sin\left(\Omega t\right)-\frac{L\mathrm{\dot\phi}\sin\left(\Omega t\right)\cos\left(\beta \right)\left(\sin\left(\beta \right)-\cos\left(\beta \right)\cos\left(\phi \right)\right)}{2}\right)}^2+\frac{L^2{\mathrm{\dot\phi}}^2{\cos\left(\beta \right)}^2{\sin\left(\phi \right)}^2}{4}\right)}{2}
+    \end{split}
+\end{equation}
+
+For the rotational part we get considering the moment of inertia w.r.t. the c.o.m. in the s frame:
+
+\begin{equation}
+    \begin{split}
+        T_\text{square rot} = \frac{L^2M\left(\mathrm{\dot\phi}+\Omega \sin\left(\beta \right)\right)\left(\frac{\mathrm{\dot\phi}}{2}+\frac{\Omega \sin\left(\beta \right)}{2}\right)}{12}+\frac{L^2M\Omega ^2{\cos\left(\beta \right)}^2{\cos\left(\phi \right)}^2}{24}
+    \end{split}
+\end{equation}
+
+Which leads to:
+
+\begin{equation}
+    \begin{split}
+        T_\text{square} = \frac{L^2M\left(-\Omega ^2{\cos\left(\beta \right)}^2{\cos\left(\phi \right)}^2+\Omega ^2{\cos\left(\beta \right)}^2+3\sin\left(\beta \right)\Omega ^2\cos\left(\beta \right)\cos\left(\phi \right)+6\Omega ^2\cos\left(\beta \right)+6\sin\left(\beta \right)\Omega ^2\cos\left(\phi \right)+8\Omega ^2+3\Omega \mathrm{\dot\phi}\cos\left(\beta \right)\cos\left(\phi \right)+6\Omega \mathrm{\dot\phi}\cos\left(\phi \right)+4\sin\left(\beta \right)\Omega \mathrm{\dot\phi}+2{\mathrm{\dot\phi}}^2\right)}{12}
+    \end{split}
+\end{equation}
+
+For the potential energy we get:
+\begin{equation}
+    \begin{split}
+        \frac{LMg\left(\sin\left(\beta \right)-\cos\left(\beta \right)\cos\left(\phi \right)\right)}{2}
+    \end{split}
+\end{equation}
+
+\subsubsection{Total Energy}
+The total kinetic energy comes to:
+
+\begin{equation}
+    \begin{split}
+        &T = \underbrace{T_\text{vertical bar}}_{0} + T_\text{bar} + T_\text{Rod} + T_\text{Square} = \\
+        & \frac{L^2\left(8M\Omega ^2+8\Omega ^2m+2M{\mathrm{\dot\phi}}^2+6M\Omega ^2\cos\left(\beta \right)+6\Omega ^2m\cos\left(\beta \right)+M\Omega ^2{\cos\left(\beta \right)}^2+2\Omega ^2m{\cos\left(\beta \right)}^2+6M\Omega ^2\cos\left(\phi \right)\sin\left(\beta \right)+6M\Omega \mathrm{\dot\phi}\cos\left(\phi \right)+4M\Omega \mathrm{\dot\phi}\sin\left(\beta \right)-M\Omega ^2{\cos\left(\beta \right)}^2{\cos\left(\phi \right)}^2+3M\Omega \mathrm{\dot\phi}\cos\left(\beta \right)\cos\left(\phi \right)+3M\Omega ^2\cos\left(\beta \right)\cos\left(\phi \right)\sin\left(\beta \right)\right)}{12}
+    \end{split}
+\end{equation}
+
+Analogous the potential energy:
+\begin{equation}
+    \begin{split}
+        &V = \underbrace{V_\text{vertical bar}}_{0} + V_\text{bar} + V_\text{Rod} + V_\text{Square} = \\
+        & \frac{LMg\left(2\sin\left(\beta \right)-\cos\left(\beta \right)\cos\left(\phi \right)\right)}{2}
+    \end{split}
+\end{equation}
+
+
+\subsection{Lagrange Equations}
+Having an expression for the kinetic and potential energy we can use them to denote our lagrange equations:
+
+\begin{equation}
+    \begin{split}
+        \frac{\partial}{\partial t}\frac{\partial T}{\partial \dot\phi} - \frac{\partial T}{\partial \phi} + \frac{\partial V}{\partial \phi} = 0
+    \end{split}
+\end{equation}
+
+Which yields:
+
+\begin{equation}
+    \begin{split}
+        \frac{LM\left(-2L\cos\left(\phi \right)\sin\left(\phi \right)\Omega ^2{\cos\left(\beta \right)}^2+3L\sin\left(\beta \right)\sin\left(\phi \right)\Omega ^2\cos\left(\beta \right)+6L\sin\left(\beta \right)\sin\left(\phi \right)\Omega ^2+6g\sin\left(\phi \right)\cos\left(\beta \right)+4L\mathrm{\ddot\phi}\right)}{12} = 0
+    \end{split}
+\end{equation}
+
+Which is a differential equation for $\phi$.
+
+\subsection{Non constant angular velocity around vertical Shaft}
+\subsubsection{Vertical shaft}
+Unchanged
+\subsubsection{Bar}
+
+ \begin{equation}
+    \begin{split}
+        T_\text{bar} = \frac{L^2\Omega ^2m}{6}
+    \end{split}
+ \end{equation}
+
+ \begin{equation}
+    \begin{split}
+        V_\text{bar} = 0
+    \end{split}
+ \end{equation}
+
+ \subsubsection{Rod}
+
+ \begin{equation}
+    \begin{split}
+        T_\text{rod} = \frac{L^2m{\mathrm{\dot\theta}}^2\left({\cos\left(\beta \right)}^2+3\cos\left(\beta \right)+3\right)}{6}
+    \end{split}
+ \end{equation}
+
+ \begin{equation}
+    \begin{split}
+        V_\text{rod} = \frac{Lgm\sin\left(\beta \right)}{2}
+    \end{split}
+ \end{equation}
+
+ \subsubsection{Square}
+
+ \begin{equation}
+    \begin{split}
+        T_\text{square} = \frac{L^2M\left(2{\mathrm{\dot\phi}}^2+3\mathrm{\dot\phi}\mathrm{\dot\theta}\cos\left(\beta \right)\cos\left(\phi \right)+6\mathrm{\dot\phi}\mathrm{\dot\theta}\cos\left(\phi \right)+4\sin\left(\beta \right)\mathrm{\dot\phi}\mathrm{\dot\theta}-{\mathrm{\dot\theta}}^2{\cos\left(\beta \right)}^2{\cos\left(\phi \right)}^2+{\mathrm{\dot\theta}}^2{\cos\left(\beta \right)}^2+3\sin\left(\beta \right){\mathrm{\dot\theta}}^2\cos\left(\beta \right)\cos\left(\phi \right)+6{\mathrm{\dot\theta}}^2\cos\left(\beta \right)+6\sin\left(\beta \right){\mathrm{\dot\theta}}^2\cos\left(\phi \right)+8{\mathrm{\dot\theta}}^2\right)}{12}
+    \end{split}
+ \end{equation}
+
+ \begin{equation}
+    \begin{split}
+        V_\text{square} = \frac{LMg\left(\sin\left(\beta \right)-\cos\left(\beta \right)\cos\left(\phi \right)\right)}{2}
+    \end{split}
+ \end{equation}
+
+ \subsubsection{Total Energy}
+
+ \begin{equation}
+    \begin{split}
+        T = \frac{L^2\left(2M{\mathrm{\dot\phi}}^2+8M{\mathrm{\dot\theta}}^2+8m{\mathrm{\dot\theta}}^2+6M{\mathrm{\dot\theta}}^2\cos\left(\beta \right)+6m{\mathrm{\dot\theta}}^2\cos\left(\beta \right)+M{\mathrm{\dot\theta}}^2{\cos\left(\beta \right)}^2+2m{\mathrm{\dot\theta}}^2{\cos\left(\beta \right)}^2+6M{\mathrm{\dot\theta}}^2\cos\left(\phi \right)\sin\left(\beta \right)+6M\mathrm{\dot\phi}\mathrm{\dot\theta}\cos\left(\phi \right)+4M\mathrm{\dot\phi}\mathrm{\dot\theta}\sin\left(\beta \right)-M{\mathrm{\dot\theta}}^2{\cos\left(\beta \right)}^2{\cos\left(\phi \right)}^2+3M\mathrm{\dot\phi}\mathrm{\dot\theta}\cos\left(\beta \right)\cos\left(\phi \right)+3M{\mathrm{\dot\theta}}^2\cos\left(\beta \right)\cos\left(\phi \right)\sin\left(\beta \right)\right)}{12}
+    \end{split}
+ \end{equation}
+
+ \begin{equation}
+    \begin{split}
+        V = \frac{Lgm\sin\left(\beta \right)}{2}+\frac{LMg\left(\sin\left(\beta \right)-\cos\left(\beta \right)\cos\left(\phi \right)\right)}{2}
+    \end{split}
+ \end{equation}
+
+ \subsubsection{Lagrange Equations}
+ As now we have two generalized coordinates we also have two lagrangr equations. For $\phi$ we get:
+
+ \begin{equation}
+    \begin{split}
+        \frac{LM\left(-2L\cos\left(\phi \right)\sin\left(\phi \right){\mathrm{\dot\theta}}^2{\cos\left(\beta \right)}^2+3L\sin\left(\beta \right)\sin\left(\phi \right){\mathrm{\dot\theta}}^2\cos\left(\beta \right)+6L\sin\left(\beta \right)\sin\left(\phi \right){\mathrm{\dot\theta}}^2+6g\sin\left(\phi \right)\cos\left(\beta \right)+4L\mathrm{\ddot\phi}\right)}{12}
+    \end{split}
+ \end{equation}
+
+ For $\theta$:
+
+ \begin{equation}
+    \begin{split}
+        \frac{L^2\mathrm{\ddot\theta}\left(16M+16m+12M\cos\left(\beta \right)+12m\cos\left(\beta \right)+2M{\cos\left(\beta \right)}^2+4m{\cos\left(\beta \right)}^2-2M{\cos\left(\beta \right)}^2{\cos\left(\phi \right)}^2+12M\cos\left(\phi \right)\sin\left(\beta \right)+6M\cos\left(\beta \right)\cos\left(\phi \right)\sin\left(\beta \right)\right)}{12}
+    \end{split}
+ \end{equation}
+
+
+\subsection{Non Conservative Forces}
+Now we have a non conservative force attacking on the square.
+
+We have to derive the velocity of a random point on the square. In the following I will parametrize said point with $x_1$ and $x_2$ which are the coordinates of the point on the square in the s frame from B.
+
+\begin{equation}
+    \begin{split}
+        v_{Pi} &= v_{Bi} + \omega_i \times BP_i\\
+        &=\begin{pmatrix}
+            &-\mathrm{\dot\phi}x_{1}\cos\left(\beta \right)\sin\left(\phi \right)\\
+            &\left(x_{1}\left(\cos\left(\theta \right)\sin\left(\phi \right)+\cos\left(\phi \right)\sin\left(\beta \right)\sin\left(\theta \right)\right)-x_{2}\cos\left(\beta \right)\sin\left(\theta \right)\right)\left(\mathrm{\dot\theta}+\mathrm{\dot\phi}\sin\left(\beta \right)\right)-L\mathrm{\dot\theta}\sin\left(\theta \right)+\mathrm{\dot\phi}\cos\left(\beta \right)\sin\left(\theta \right)\left(x_{2}\sin\left(\beta \right)+x_{1}\cos\left(\beta \right)\cos\left(\phi \right)\right)\\
+            &\left(x_{1}\left(\sin\left(\phi \right)\sin\left(\theta \right)-\cos\left(\phi \right)\sin\left(\beta \right)\cos\left(\theta \right)\right)+x_{2}\cos\left(\beta \right)\cos\left(\theta \right)\right)\left(\mathrm{\dot\theta}+\mathrm{\dot\phi}\sin\left(\beta \right)\right)+L\mathrm{\dot\theta}\cos\left(\theta \right)-\mathrm{\dot\phi}\cos\left(\beta \right)\cos\left(\theta \right)\left(x_{2}\sin\left(\beta \right)+x_{1}\cos\left(\beta \right)\cos\left(\phi \right)\right)
+        \end{pmatrix}
+    \end{split}
+\end{equation}
+
+Therefore the work of the force contribution at a single point P is:
+
+\begin{equation}
+    \begin{split}
+        dW &= -cvP_i\bullet vP_i = \\
+        &= -c{\left(\left(x_{1}\left(\sin\left(\phi \right)\sin\left(\theta \right)-\cos\left(\phi \right)\sin\left(\beta \right)\cos\left(\theta \right)\right)+x_{2}\cos\left(\beta \right)\cos\left(\theta \right)\right)\left(\mathrm{\dot\theta}+\mathrm{\dot\phi}\sin\left(\beta \right)\right)+L\mathrm{\dot\theta}\cos\left(\theta \right)-\mathrm{\dot\phi}\cos\left(\beta \right)\cos\left(\theta \right)\left(x_{2}\sin\left(\beta \right)+x_{1}\cos\left(\beta \right)\cos\left(\phi \right)\right)\right)}^2-c{\left(\left(x_{1}\left(\cos\left(\theta \right)\sin\left(\phi \right)+\cos\left(\phi \right)\sin\left(\beta \right)\sin\left(\theta \right)\right)-x_{2}\cos\left(\beta \right)\sin\left(\theta \right)\right)\left(\mathrm{\dot\theta}+\mathrm{\dot\phi}\sin\left(\beta \right)\right)-L\mathrm{\dot\theta}\sin\left(\theta \right)+\mathrm{\dot\phi}\cos\left(\beta \right)\sin\left(\theta \right)\left(x_{2}\sin\left(\beta \right)+x_{1}\cos\left(\beta \right)\cos\left(\phi \right)\right)\right)}^2-c{\mathrm{\dot\phi}}^2{x_{1}}^2{\cos\left(\beta \right)}^2{\sin\left(\phi \right)}^2
+    \end{split}
+\end{equation}
+
+As we want to derive the whole work done by the area distributed force we integrate the expression of dW over the whole square:
+
+\begin{equation}
+    \begin{split}
+        W = \int_{x_1 = -L}^0\int_{x_2 = 0}^L-c{\left(\left(x_{1}\left(\sin\left(\phi \right)\sin\left(\theta \right)-\cos\left(\phi \right)\sin\left(\beta \right)\cos\left(\theta \right)\right)+x_{2}\cos\left(\beta \right)\cos\left(\theta \right)\right)\left(\mathrm{\dot\theta}+\mathrm{\dot\phi}\sin\left(\beta \right)\right)+L\mathrm{\dot\theta}\cos\left(\theta \right)-\mathrm{\dot\phi}\cos\left(\beta \right)\cos\left(\theta \right)\left(x_{2}\sin\left(\beta \right)+x_{1}\cos\left(\beta \right)\cos\left(\phi \right)\right)\right)}^2-c{\left(\left(x_{1}\left(\cos\left(\theta \right)\sin\left(\phi \right)+\cos\left(\phi \right)\sin\left(\beta \right)\sin\left(\theta \right)\right)-x_{2}\cos\left(\beta \right)\sin\left(\theta \right)\right)\left(\mathrm{\dot\theta}+\mathrm{\dot\phi}\sin\left(\beta \right)\right)-L\mathrm{\dot\theta}\sin\left(\theta \right)+\mathrm{\dot\phi}\cos\left(\beta \right)\sin\left(\theta \right)\left(x_{2}\sin\left(\beta \right)+x_{1}\cos\left(\beta \right)\cos\left(\phi \right)\right)\right)}^2-c{\mathrm{\dot\phi}}^2{x_{1}}^2{\cos\left(\beta \right)}^2{\sin\left(\phi \right)}^2dx_2dx_1
+    \end{split}
+\end{equation}
+
+Which comes to:
+
+\begin{equation}
+    \begin{split}
+        W = -\frac{cL^4{\mathrm{\dot\phi}}^2}{3}-\frac{cL^4\mathrm{\dot\phi}\mathrm{\dot\theta}\cos\left(\beta \right)\cos\left(\phi \right)}{2}-cL^4\mathrm{\dot\phi}\mathrm{\dot\theta}\cos\left(\phi \right)-\frac{2c\sin\left(\beta \right)L^4\mathrm{\dot\phi}\mathrm{\dot\theta}}{3}+\frac{cL^4{\mathrm{\dot\theta}}^2{\cos\left(\beta \right)}^2{\cos\left(\phi \right)}^2}{3}-\frac{cL^4{\mathrm{\dot\theta}}^2{\cos\left(\beta \right)}^2}{3}-\frac{c\sin\left(\beta \right)L^4{\mathrm{\dot\theta}}^2\cos\left(\beta \right)\cos\left(\phi \right)}{2}-cL^4{\mathrm{\dot\theta}}^2\cos\left(\beta \right)-c\sin\left(\beta \right)L^4{\mathrm{\dot\theta}}^2\cos\left(\phi \right)-\frac{4cL^4{\mathrm{\dot\theta}}^2}{3}
+    \end{split}
+\end{equation}
+
+And finally the generalized forces are:
+
+\begin{equation}
+    \begin{split}
+        Q_\phi = \frac{\partial W}{\partial \phi} = -\frac{L^4c\left(4\mathrm{\dot\phi}+6\mathrm{\dot\theta}\cos\left(\phi \right)+4\mathrm{\dot\theta}\sin\left(\beta \right)+3\mathrm{\dot\theta}\cos\left(\beta \right)\cos\left(\phi \right)\right)}{6}
     \end{split}
 \end{equation}
 
@@ -165,93 +301,6 @@ And
 
 \begin{equation}
     \begin{split}
-        &\frac{cL^4}{6}\left(16\dot\theta+24\dot\theta\cos\left(\beta \right)+6\mathrm{\dot\phi}\cos\left(\phi \right)+4\mathrm{\dot\phi}\sin\left(\beta \right)+13\dot\theta{\cos\left(\beta \right)}^2-4\dot\theta{\cos\left(\beta \right)}^2{\cos\left(\phi \right)}^2+6\mathrm{\dot\phi}\cos\left(\beta \right)\cos\left(\phi \right)+12\dot\theta\cos\left(\phi \right)\sin\left(\beta \right)+\right.\\
-        &\left.12\dot\theta\cos\left(\beta \right)\cos\left(\phi \right)\sin\left(\beta \right)\right)+\\
-        &\frac{\mathrm{\ddot\theta}}{12} \left(16M+16m+12M\cos\left(\beta \right)+12m\cos\left(\beta \right)+2M{\cos\left(\beta \right)}^2+4m{\cos\left(\beta \right)}^2-2M{\cos\left(\beta \right)}^2{\cos\left(\phi \right)}^2+\right.\\
-        &\left.12M\cos\left(\phi \right)\sin\left(\beta \right)+6M\cos\left(\beta \right)\cos\left(\phi \right)\sin\left(\beta \right)\vphantom{\int}\right)L^2\hspace{45mm}\text{for } \theta
-    \end{split}
-\end{equation}
-
-
-\subsection{Plugging in the values:}
-
-Let $L = 0.25 [m], \beta = \frac{\pi}{6},M= 0.5 [kg],m= 0.2 [kg], g = 9.81[\frac{m}{s^2}] \text{ and } c = 0.1[\frac{Ns}{m^3}]$.\vspace{3mm}\\
-
-The equations become:
-
-\begin{equation}
-    \begin{split}
-        &\frac{\mathrm{\dot\phi}}{3840}+\frac{11\mathrm{\ddot\phi}}{960}+\frac{\dot\theta}{7680}+\frac{{\dot\theta}^2\sin\left(\phi \right)}{128}+\frac{981\sqrt{3}\sin\left(\phi \right)}{3200}+\frac{\sqrt{3}{\dot\theta}^2\sin\left(\phi \right)}{512}+\frac{\dot\theta\cos\left(\phi \right)\left(\frac{\sqrt{3}}{2}+1\right)}{2560}\\
-        &-\frac{{\dot\theta}^2\cos\left(\phi \right)\sin\left(\phi \right)}{256}\hspace{25mm} \text{for } \phi
-    \end{split}
-\end{equation}
-
-And
-
-\begin{equation}
-    \begin{split}
-        &\frac{\mathrm{\dot\phi}}{7680}+\frac{103\dot\theta}{61440}-\frac{\dot\theta{\cos\left(\phi \right)}^2}{5120}+\frac{\sqrt{3}\dot\theta}{1280}+\\
-        &\frac{\mathrm{\ddot\theta}}{192}\left(3\cos\left(\phi \right)-\frac{3{\cos\left(\phi \right)}^2}{4}+\frac{21\sqrt{3}}{5}+\frac{3\sqrt{3}\cos\left(\phi \right)}{4}+\frac{251}{20}\right)+\\
-        &\frac{\mathrm{\dot\phi}\cos\left(\phi \right)}{2560}+\frac{\dot\theta\cos\left(\phi \right)}{2560}+\frac{\sqrt{3}\mathrm{\dot\phi}\cos\left(\phi \right)}{5120}+\frac{\sqrt{3}\dot\theta\cos\left(\phi \right)}{5120}\hspace{45mm}\text{for } \theta
-    \end{split}
-\end{equation}
-
-\subsection{Equilibrium State}
-
-Reminder- The potential energy looks as follows:
-
-\begin{equation}
-    \begin{split}
-        \frac{LMg\left(2\sin\left(\beta \right)-\cos\left(\beta \right)\cos\left(\phi \right)\right)}{2}
-    \end{split}
-\end{equation}
-\textbf{Case 1: $\Omega$ fixed:} \vspace{0.5cm}\\
-
-The derivative of the potential energy w.r.t. $\theta$ is always 0.
-
-\begin{equation}
-    \begin{split}
-        \frac{\partial V}{\partial \theta} = 0
-    \end{split}
-\end{equation}
-
-The derivative of the potential energy w.r.t. $\phi$ not however:
-
-\begin{equation}
-    \begin{split}
-        \frac{\partial V}{\partial \phi} = \frac{LMg\cos\left(\beta \right)\sin\left(\phi \right)}{2}
-    \end{split}
-\end{equation}
-
-\noindent Equation 12 is only 0 for $\boldsymbol{\phi = k*\pi}$ which makes sense as in this configuration the square has a momentary velocity in horizontal direction which doesn't change the altitude of any body.\vspace{0.5cm}\\
-
-\textbf{Case 2: $\dot\theta$ can change:} \vspace{0.3cm}\\
-
-As V is independent of $\theta$ altogether the result is the same for this case.\vspace{3mm}\\
-
-\noindent \textbf{The equation of motions are after plugging in equilibrium state:}\vspace{3mm}\\
-
-% Plugging in $\phi = \dot\phi = \ddot\phi = 0$:
-
-\begin{equation}
-    \begin{split}
-        &\phi:\\
-        &0 = 0
-    \end{split}
-\end{equation}
-
-\begin{equation}
-    \begin{split}
-        &\theta:\\
-        &\frac{L^2\mathrm{\ddot\theta}}{12}\left(16M+16m+12M\cos\left(\beta \right)+12M\sin\left(\beta \right)+12m\cos\left(\beta \right)+\right.\\
-        &\left.4m{\cos\left(\beta \right)}^2+6M\cos\left(\beta \right)\sin\left(\beta \right)\vphantom{\int_1^2}\right) = 0
-    \end{split}
-\end{equation}
-As the coefficient of $\ddot\theta$ is constant, the angular acceleration of the vertical shaft has to be 0. This results in a constant angular velocity which recovers the case of a constant $\Omega$.
-
-
-\begin{equation}
-    \begin{split}
-        \frac{L^2\,M\,\left(-2\,\cos\left(\phi \right)\,\sin\left(\phi \right)\,{\mathrm{\dot \theta}}^2\,{\cos\left(\beta \right)}^2+3\,\sin\left(\beta \right)\,\sin\left(\phi \right)\,{\mathrm{\dot \theta}}^2\,\cos\left(\beta \right)+6\,\sin\left(\beta \right)\,\sin\left(\phi \right)\,{\mathrm{\dot \theta}}^2+4\,\mathrm{\ddot \phi}\right)}{12}
+        Q_\theta = -\frac{L^4c\left(16\mathrm{\dot\theta}+12\mathrm{\dot\theta}\cos\left(\beta \right)+6\mathrm{\dot\phi}\cos\left(\phi \right)+4\mathrm{\dot\phi}\sin\left(\beta \right)+4\mathrm{\dot\theta}{\cos\left(\beta \right)}^2-4\mathrm{\dot\theta}{\cos\left(\beta \right)}^2{\cos\left(\phi \right)}^2+3\mathrm{\dot\phi}\cos\left(\beta \right)\cos\left(\phi \right)+12\mathrm{\dot\theta}\cos\left(\phi \right)\sin\left(\beta \right)+6\mathrm{\dot\theta}\cos\left(\beta \right)\cos\left(\phi \right)\sin\left(\beta \right)\right)}{6}
     \end{split}
 \end{equation}
