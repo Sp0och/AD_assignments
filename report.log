@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2023.1.17)  23 JUL 2023 18:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2023.1.17)  23 JUL 2023 18:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -424,135 +424,80 @@ Package pdftex.def Info: images/square_frame.png  used on input line 40.
  [16
 
  <./images/rod_frame.png> <./images/square_frame.png>]
-Overfull \hbox (884.5917pt too wide) detected at line 111
+Overfull \hbox (108.00528pt too wide) detected at line 114
 []
  []
 
-[17]
-Overfull \hbox (421.12616pt too wide) detected at line 127
+[17] [18] [19] [20] [21]
+Overfull \hbox (328.54538pt too wide) detected at line 344
 []
  []
 
-
-Overfull \hbox (640.66295pt too wide) detected at line 144
-[]
- []
-
-
-Overfull \hbox (168.9063pt too wide) detected at line 170
-[]
- []
-
-[18]
-Overfull \hbox (393.09836pt too wide) detected at line 211
-[]
- []
-
-
-Overfull \hbox (634.22882pt too wide) detected at line 225
-[]
- []
-
-[19]
-Overfull \hbox (143.82306pt too wide) detected at line 240
-[]
- []
-
-
-Overfull \hbox (292.04518pt too wide) detected at line 248
-[]
- []
-
-
-Overfull \hbox (307.21127pt too wide) detected at line 265
-[]
- []
-
-
-Overfull \hbox (1043.97385pt too wide) detected at line 274
-[]
- []
-
-
-Overfull \hbox (1129.90115pt too wide) detected at line 282
-[]
- []
-
-
-Overfull \hbox (487.81094pt too wide) detected at line 290
-[]
- []
-
-[20]
-Overfull \hbox (328.54538pt too wide) detected at line 306
-[]
- []
-
-) [21] (assignment_4.tex
-<images/q_init_1.jpg, id=427, 1124.2pt x 843.15pt>
+) [22] (assignment_4.tex
+<images/q_init_1.jpg, id=431, 1124.2pt x 843.15pt>
 File: images/q_init_1.jpg Graphic file (type jpg)
 <use images/q_init_1.jpg>
 Package pdftex.def Info: images/q_init_1.jpg  used on input line 32.
 (pdftex.def)             Requested size: 264.18704pt x 198.14027pt.
- [22
+ [23
 
  <./images/q_init_1.jpg>]
-<images/Equilibrium1.jpg, id=434, 1124.2pt x 843.15pt>
+<images/Equilibrium1.jpg, id=438, 1124.2pt x 843.15pt>
 File: images/Equilibrium1.jpg Graphic file (type jpg)
 <use images/Equilibrium1.jpg>
 Package pdftex.def Info: images/Equilibrium1.jpg  used on input line 63.
 (pdftex.def)             Requested size: 264.18704pt x 198.14027pt.
- [23 <./images/Equilibrium1.jpg>]
-<images/q_init_2.jpg, id=441, 1124.2pt x 843.15pt>
+ [24 <./images/Equilibrium1.jpg>]
+<images/q_init_2.jpg, id=445, 1124.2pt x 843.15pt>
 File: images/q_init_2.jpg Graphic file (type jpg)
 <use images/q_init_2.jpg>
 Package pdftex.def Info: images/q_init_2.jpg  used on input line 101.
 (pdftex.def)             Requested size: 264.18704pt x 198.14027pt.
- [24 <./images/q_init_2.jpg>]
-<images/Equilibrium2.jpg, id=448, 1124.2pt x 843.15pt>
+ [25 <./images/q_init_2.jpg>]
+<images/Equilibrium2.jpg, id=453, 1124.2pt x 843.15pt>
 File: images/Equilibrium2.jpg Graphic file (type jpg)
 <use images/Equilibrium2.jpg>
 Package pdftex.def Info: images/Equilibrium2.jpg  used on input line 136.
 (pdftex.def)             Requested size: 264.18704pt x 198.14027pt.
-<images/q_init_3.jpg, id=449, 1124.2pt x 843.15pt>
+<images/q_init_3.jpg, id=454, 1124.2pt x 843.15pt>
 File: images/q_init_3.jpg Graphic file (type jpg)
 <use images/q_init_3.jpg>
 Package pdftex.def Info: images/q_init_3.jpg  used on input line 167.
 (pdftex.def)             Requested size: 264.18704pt x 198.14027pt.
- [25 <./images/Equilibrium2.jpg>] [26 <./images/q_init_3.jpg>]
-<images/Equilibrium3.jpg, id=464, 1124.2pt x 843.15pt>
+ [26 <./images/Equilibrium2.jpg>] [27 <./images/q_init_3.jpg>]
+<images/Equilibrium3.jpg, id=468, 1124.2pt x 843.15pt>
 File: images/Equilibrium3.jpg Graphic file (type jpg)
 <use images/Equilibrium3.jpg>
 Package pdftex.def Info: images/Equilibrium3.jpg  used on input line 198.
 (pdftex.def)             Requested size: 264.18704pt x 198.14027pt.
-<images/q_init_4.jpg, id=468, 1124.2pt x 843.15pt>
+<images/q_init_4.jpg, id=472, 1124.2pt x 843.15pt>
 File: images/q_init_4.jpg Graphic file (type jpg)
 <use images/q_init_4.jpg>
 Package pdftex.def Info: images/q_init_4.jpg  used on input line 213.
 (pdftex.def)             Requested size: 264.18704pt x 198.14027pt.
-<images/Equilibrium4.jpg, id=469, 1124.2pt x 843.15pt>
+<images/Equilibrium4.jpg, id=473, 1124.2pt x 843.15pt>
 File: images/Equilibrium4.jpg Graphic file (type jpg)
 <use images/Equilibrium4.jpg>
 Package pdftex.def Info: images/Equilibrium4.jpg  used on input line 223.
 (pdftex.def)             Requested size: 264.18704pt x 198.14027pt.
-) [27
+) [28
 
- <./images/Equilibrium3.jpg>] [28 <./images/q_init_4.jpg>] [29 <./images/Equilibrium4.jpg>] (report.aux)
+ <./images/Equilibrium3.jpg>] [29 <./images/q_init_4.jpg>] [30 <./images/Equilibrium4.jpg>] (report.aux)
 Package rerunfilecheck Info: File `report.out' has not changed.
 (rerunfilecheck)             Checksum: 8A181FEF2A6D7F05D5BE586421CF04AB;5393.
  ) 
 Here is how much of TeX's memory you used:
- 10647 strings out of 475385
- 170499 string characters out of 2776907
- 539514 words of memory out of 3000000
+ 10648 strings out of 475385
+ 170506 string characters out of 2776907
+ 529514 words of memory out of 3000000
  31674 multiletter control sequences out of 15000+600000
  477426 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,24n,77p,1217b,469s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 72i,24n,77p,629b,469s stack positions out of 10000i,1000n,20000p,200000b,80000s
  <C:\Users\fierz\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/fierz/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/fierz/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/fierz/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx7.pfb><C:/Users/fierz/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/fierz/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/fierz/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/fierz/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Users/fierz/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb><C:/Users/fierz/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/fierz/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/fierz/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/fierz/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/fierz/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/fierz/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/fierz/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on report.pdf (29 pages, 1218829 bytes).
+Output written on report.pdf (30 pages, 1220988 bytes).
 PDF statistics:
- 590 PDF objects out of 1000 (max. 8388607)
- 177 named destinations out of 1000 (max. 500000)
+ 594 PDF objects out of 1000 (max. 8388607)
+ 178 named destinations out of 1000 (max. 500000)
  417 words of extra memory for PDF output out of 10000 (max. 10000000)
 
