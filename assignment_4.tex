@@ -1,4 +1,4 @@
-\subsection{DONE}
+    \subsection{DONE}
 \subsection{DONE}
 \subsection{DONE}
 \subsection{DONE}
@@ -67,6 +67,9 @@ Which is visualized by this figure:
 \end{figure}
 
 \noindent In this example the choice of initial generalized coordinates was obviously very good. For the first task of this assignment the goal is to find two more (probably bad) equilibria.
+
+The eigenvalues of the stiffness matrix are:
+
 
 
 
@@ -202,11 +205,78 @@ Which represents:
 \end{figure}
 
 \subsection{Analysis}
-As we are working with a first order linearization of the dynamics of the system we have to stay in the proximity of the desired state of convergence. So a horizontal car with the initial conditions as seen in equation \ref{eq:4.5.1} will converge to a reasonable solution. \\\vspace{3mm}
+As we are not considering drag yet we have a conservative, scleronomic system. For an equilibrium in such a system to be stabel we need that $\text{K}_{\text{eq}}$ must be positive definite. Aka the eigenvalues of $\text{K}_{\text{eq}}$ must be real and positive.
 
-\noindent Initial conditions like a 90° or 180° rotation of the frame can converge to a local solution as seen in Figure \ref*{fig:eq_3}\\\vspace{3mm}
+Looking at the eigenvalues for the first case:
+\begin{equation}\label{eq:normal_eigenfrequencies}
+    \begin{split}
+        \begin{pmatrix}
+            1.6913e-07\\
+            2.1774e+00\\
+            2.2340e+00\\
+            3.0009e+01\\
+            3.0821e+01\\
+            3.4894e+01\\
+            3.5642e+01\\
+            6.8555e+01\\
+            6.8673e+01\\
+            1.3035e+02\\
+            1.3036e+02
+        \end{pmatrix}
+    \end{split}
+\end{equation}
 
-\noindent The equilibrium from figure \ref{fig:eq_1} surely is stable as we all know it from reality. The two alternatives however are not stable. This can be seen from the example in fig \ref{fig:init_4} when the angle of the frame is between 0 and 90°:
+We can see that they are indeed all positive and real. Thus \ref{eq:4.5.2} is a stable equilibrium. This represents logical assumptions as the car staying in horizontal position is as we know a stable equilibrium.\vspace{3mm}\\
+
+For the second equilibrium we get the following eigenvalues:
+
+\begin{equation}
+    \begin{pmatrix}
+        0.0000e+00 + 4.9405e-01i\\
+        0.0000e+00 + 1.2122e-07i\\
+        4.4151e+00 + 0.0000e+00i\\
+        7.1552e+00 + 0.0000e+00i\\
+        7.4830e+00 + 0.0000e+00i\\
+        4.3728e+01 + 0.0000e+00i\\
+        4.3983e+01 + 0.0000e+00i\\
+        6.3302e+01 + 0.0000e+00i\\
+        7.2017e+01 + 0.0000e+00i\\
+        7.2124e+01 + 0.0000e+00i\\
+        1.2904e+02 + 0.0000e+00i
+    \end{pmatrix}
+\end{equation}
+
+Where we can see that the eigenvalues ar of complex nature. Mainly the first one
+
+Lastly for the third setting we have the following eigenvalues:
+
+\begin{equation}
+    \begin{pmatrix}
+        0.0000e+00 + 4.9405e-01i\\
+        1.9956e-07 + 0.0000e+00i\\
+        4.4151e+00 + 0.0000e+00i\\
+        7.1552e+00 + 0.0000e+00i\\
+        7.4830e+00 + 0.0000e+00i\\
+        4.3728e+01 + 0.0000e+00i\\
+        4.3983e+01 + 0.0000e+00i\\
+        6.3302e+01 + 0.0000e+00i\\
+        7.2017e+01 + 0.0000e+00i\\
+        7.2124e+01 + 0.0000e+00i\\
+        1.2904e+02 + 0.0000e+00i
+    \end{pmatrix}
+\end{equation}
+
+Where we see again, that we have complex eigenvalues denoting an unstable equilibrium.
+
+% As we are working with a first order linearization of the dynamics of the system we have to stay in the proximity of the desired state of convergence. So a horizontal car with the initial conditions as seen in equation \ref{eq:4.5.1} will converge to a reasonable solution. \\\vspace{3mm}
+
+% \noindent Initial conditions like a 90° or 180° rotation of the frame can converge to a local solution as seen in Figure \ref*{fig:eq_3}\\\vspace{3mm}
+
+% \noindent The equilibrium from figure \ref{fig:eq_1} surely is stable as we all know it from reality. The two alternatives however are not stable. This can be seen from the example in fig \ref{fig:init_4} when the angle of the frame is between 0 and 90°:
+\clearpage %HERE
+Another interesting example is the one seen in fig \ref{fig:init_4}:
+
+
 
 \begin{figure}[ht]
     \centering
@@ -216,8 +286,7 @@ As we are working with a first order linearization of the dynamics of the system
     \label{fig:init_4}
 \end{figure}
 
-Which converges to 
-
+When we start from the tilted starting position of \ref{fig:init_2} but changing merely the frame angle to a smaller $\pi/4$ we can see that it converges to something quite reasonable looking.
 \begin{figure}[ht]
     \centering
     \includegraphics[scale=0.235]{images/Equilibrium4.jpg}
@@ -226,9 +295,116 @@ Which converges to
     \label{fig:eq_4}
 \end{figure}
 
-So as we can see even with nonsensical other parameters when rotating the frame a bit less than 90° we converge to the stable solution.
+And indeed when looking at the eigenvalues:
+
+\begin{equation}
+    \begin{pmatrix}
+        2.5694e-07\\
+        2.1774e+00\\
+        2.2340e+00\\
+        3.0009e+01\\
+        3.0821e+01\\
+        3.4894e+01\\
+        3.5642e+01\\
+        6.8555e+01\\
+        6.8673e+01\\
+        1.3035e+02\\
+        1.3036e+02
+    \end{pmatrix}
+\end{equation}
+
+We see that it's a stable equilibrium. From this we can take away that a perturbation from a stable equilibrium that is small enough will converge to the stable equilibrium.   
 
 \subsection{DONE}
 \subsection{Eigenmodes and Eigenfrequencies}
+
+Looking at the eigenfrequencies in equation (\ref{eq:normal_eigenfrequencies}) we can see that the dominant ones with the large motion impact seem to be the first as well as the second and third.
+
+The eigenmodes associated with these frequencies are:
+
+\begin{equation}
+    \begin{split}
+        \begin{pmatrix}
+            6.0858e-01\\
+            9.4719e-02\\
+            -9.7389e-02\\
+                        0\\
+                        0\\
+            1.2034e-02\\
+            8.8040e-03\\
+            -4.7960e-01\\
+            5.7699e-01\\
+            1.7042e-01\\
+            1.3773e-01
+        \end{pmatrix}
+    \end{split}
+\end{equation},
+
+\begin{equation}
+    \begin{split}
+        \begin{pmatrix}
+            4.8632e-02\\
+            9.8644e-01\\
+                    0\\
+                    0\\
+                    0\\
+            1.0851e-01\\
+            1.0851e-01\\
+                    0\\
+                    0\\
+            -1.8772e-02\\
+            -2.6059e-02
+        \end{pmatrix}
+    \end{split}
+\end{equation}
+
+and
+
+\begin{equation}
+    \begin{split}
+        \begin{pmatrix}
+            -4.0695e-02\\
+                    0\\
+            8.0283e-01\\
+                    0\\
+                    0\\
+                    0\\
+                    0\\
+            -4.0141e-01\\
+            -4.0141e-01\\
+            -1.2602e-01\\
+            1.2515e-01
+        \end{pmatrix}
+    \end{split}
+\end{equation}
+
+Plotted out we get the following configurations:
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.235]{images/mode1.jpg}
+    \caption{Eigenmode Configuration 1}
+    %label always in the end
+    \label{fig:mode_1}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.235]{images/mode2.jpg}
+    \caption{Eigenmode Configuration 2}
+    %label always in the end
+    \label{fig:mode_2}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.235]{images/mode3.jpg}
+    \caption{Eigenmode Configuration 3}
+    %label always in the end
+    \label{fig:mode_3}
+\end{figure}
+
+If only these could be explained.
+
 \subsubsection{DONE}
 \subsubsection{Mode Shapes}

@@ -251,27 +251,63 @@ Unchanged
  \end{equation}
 
  \subsubsection{Lagrange Equations}
- As now we have two generalized coordinates we also have two lagrangr equations. For $\phi$ we get:
 
- \begin{equation}
+%  As now we have two generalized coordinates we also have two lagrangr equations. For $\phi$ we get:
+
+%  \begin{equation}
+%     \begin{split}
+%         &\frac{LM}{12}\left(-2L\cos\left(\phi \right)\sin\left(\phi \right){\mathrm{\dot\theta}}^2{\cos\left(\beta \right)}^2+3L\sin\left(\beta \right)\sin\left(\phi \right){\mathrm{\dot\theta}}^2\cos\left(\beta \right)\right.\\
+%         &\left.\vphantom{\int}+6L\sin\left(\beta \right)\sin\left(\phi \right){\mathrm{\dot\theta}}^2+6g\sin\left(\phi \right)\cos\left(\beta \right)+4L\mathrm{\ddot\phi}\right)
+%     \end{split}
+%  \end{equation}
+
+%  And for $\theta$:
+
+%  \begin{equation}
+%     \begin{split}
+%         &\frac{L^2}{12}\mathrm{\ddot\theta}\left(16M+16m+12M\cos\left(\beta \right)+12m\cos\left(\beta \right)+2M{\cos\left(\beta \right)}^2\right.\\
+%         &+4m{\cos\left(\beta \right)}^2-2M{\cos\left(\beta \right)}^2{\cos\left(\phi \right)}^2+12M\cos\left(\phi \right)\sin\left(\beta \right)\\
+%         &\left.\vphantom{\int}+6M\cos\left(\beta \right)\cos\left(\phi \right)\sin\left(\beta \right)\right)
+%     \end{split}
+%  \end{equation}
+
+As we have now two generalized coordinates the lagrange equations look like this:
+
+\begin{equation}
     \begin{split}
-        &\frac{LM}{12}\left(-2L\cos\left(\phi \right)\sin\left(\phi \right){\mathrm{\dot\theta}}^2{\cos\left(\beta \right)}^2+3L\sin\left(\beta \right)\sin\left(\phi \right){\mathrm{\dot\theta}}^2\cos\left(\beta \right)\right.\\
-        &\left.\vphantom{\int}+6L\sin\left(\beta \right)\sin\left(\phi \right){\mathrm{\dot\theta}}^2+6g\sin\left(\phi \right)\cos\left(\beta \right)+4L\mathrm{\ddot\phi}\right)
+        \frac{\partial}{\partial t}\frac{\partial T}{\partial  \text{\textbf{q}}} - \frac{\partial T}{\partial \text{\textbf{q}}} + \frac{\partial V}{\partial \text{\textbf{q}}} = 0
     \end{split}
- \end{equation}
+\end{equation}
 
- And for $\theta$:
+Where $\text{\textbf{q}} = \begin{pmatrix}
+    \phi\\
+    \theta
+\end{pmatrix}$
 
- \begin{equation}
+This leads to two equations. For visualization purposes I will write down the entries one after the other:
+
+\begin{equation}
     \begin{split}
-        &\frac{L^2}{12}\mathrm{\ddot\theta}\left(16M+16m+12M\cos\left(\beta \right)+12m\cos\left(\beta \right)+2M{\cos\left(\beta \right)}^2\right.\\
-        &+4m{\cos\left(\beta \right)}^2-2M{\cos\left(\beta \right)}^2{\cos\left(\phi \right)}^2+12M\cos\left(\phi \right)\sin\left(\beta \right)\\
-        &\left.\vphantom{\int}+6M\cos\left(\beta \right)\cos\left(\phi \right)\sin\left(\beta \right)\right)
+        &\frac{L^2\,M\,\mathrm{\ddot \phi}}{3}+\frac{L^2\,M\,\mathrm{\ddot  \theta}\,\left(6\,\cos\left(\phi \right)+4\,\sin\left(\beta \right)+3\,\cos\left(\beta \right)\,\cos\left(\phi \right)\right)}{12}+\frac{L\,M\,g\,\cos\left(\beta \right)\,\sin\left(\phi \right)}{2}\\
+        &+\frac{L^2\,M\,\mathrm{\dot  \theta}\,\sin\left(\phi \right)\,\left(6\,\mathrm{\dot \phi}+3\,\mathrm{\dot \phi}\,\cos\left(\beta \right)+6\,\mathrm{\dot  \theta}\,\sin\left(\beta \right)+3\,\mathrm{\dot  \theta}\,\cos\left(\beta \right)\,\sin\left(\beta \right)-2\,\mathrm{\dot  \theta}\,{\cos\left(\beta \right)}^2\,\cos\left(\phi \right)\right)}{12}\\
+        &-\frac{L^2\,M\,\mathrm{\dot \phi}\,\mathrm{\dot  \theta}\,\sin\left(\phi \right)\,\left(\cos\left(\beta \right)+2\right)}{4}
     \end{split}
- \end{equation}
+\end{equation}
+
+And
+
+\begin{equation}
+    \begin{split}
+        &\frac{L^2\,\mathrm{\ddot  \theta}}{12}\,\left(\vphantom{\int}16\,M+16\,m+12\,M\,\cos\left(\beta \right)+12\,m\,\cos\left(\beta \right)+2\,M\,{\cos\left(\beta \right)}^2\right.\\
+        &\left.\vphantom{\int}+4\,m\,{\cos\left(\beta \right)}^2-2\,M\,{\cos\left(\beta \right)}^2\,{\cos\left(\phi \right)}^2+12\,M\,\cos\left(\phi \right)\,\sin\left(\beta \right)+6\,M\,\cos\left(\beta \right)\,\cos\left(\phi \right)\,\sin\left(\beta \right)\right)\\
+        &+\frac{L^2\,M\,\mathrm{\ddot \phi}\,\left(6\,\cos\left(\phi \right)+4\,\sin\left(\beta \right)+3\,\cos\left(\beta \right)\,\cos\left(\phi \right)\right)}{12}\\
+        &-\frac{L^2\,M\,\mathrm{\dot \phi}\,\sin\left(\phi \right)\,\left(6\,\mathrm{\dot \phi}+3\,\mathrm{\dot \phi}\,\cos\left(\beta \right)+12\,\mathrm{\dot  \theta}\,\sin\left(\beta \right)+6\,\mathrm{\dot  \theta}\,\cos\left(\beta \right)\,\sin\left(\beta \right)-4\,\mathrm{\dot  \theta}\,{\cos\left(\beta \right)}^2\,\cos\left(\phi \right)\right)}{12}
+    \end{split}
+\end{equation}
 
 
-\subsection{Non Conservative Forces}
+
+\subsection{Non Conservative Forces}\label{subsec:3.4}
 Now we have a non conservative force attacking on the square.
 
 We have to derive the velocity of a random point on the square. In the following I will parametrize said point with $x_1$ and $x_2$ which are the coordinates of the point on the square in the s frame from B.
@@ -369,11 +405,11 @@ And
     \end{split}
 \end{equation}
 
-For the equation of motion considering the inserted values we get:
+For the rheonomic system with a constant Omega and the plugged in values we get:
 
 \begin{equation}\label{eq:3.6.3}
     \begin{split}
-        \frac{981\,\sqrt{3}\,\sin\left(\phi \right)}{3200}+\frac{\Omega ^2\,\sin\left(\phi \right)}{128}+\frac{\sqrt{3}\,\Omega ^2\,\sin\left(\phi \right)}{512}-\frac{\Omega ^2\,\cos\left(\phi \right)\,\sin\left(\phi \right)}{256} = 0
+        \frac{981\sqrt{3}\sin\left(\phi \right)}{3200}+\frac{\Omega ^2\sin\left(\phi \right)}{128}+\frac{\sqrt{3}\Omega ^2\sin\left(\phi \right)}{512}-\frac{\Omega ^2\cos\left(\phi \right)\sin\left(\phi \right)}{256} = 0
     \end{split}
 \end{equation}
 
@@ -381,22 +417,69 @@ Or for the case of a free rotation around A:
 
 \begin{equation}\label{eq:3.6.4}
     \begin{split}
-        \frac{{\mathrm{thetad}}^2\,\sin\left(\phi \right)}{128}+\frac{981\,\sqrt{3}\,\sin\left(\phi \right)}{3200}+\frac{\sqrt{3}\,{\mathrm{thetad}}^2\,\sin\left(\phi \right)}{512}-\frac{{\mathrm{thetad}}^2\,\cos\left(\phi \right)\,\sin\left(\phi \right)}{256} = 0
+        \left(\begin{array}{c} \frac{981\,\sqrt{3}\,\sin\left(\phi _{\mathrm{eq}}\right)}{3200}\\ 0 \end{array}\right) = \left(\begin{array}{c}0\\ 0 \end{array}\right)
     \end{split}
 \end{equation}
 
-And for $\theta$:
+And as can be seen the above equation (\ref{eq:3.6.4}) can be read as:
+
+\begin{equation}\label{eq:3.6.4}
+    \begin{split}
+        \begin{pmatrix}
+            A\sin(\phi_{\text{eq}})\\0
+        \end{pmatrix} = \begin{pmatrix}
+            0\\0
+        \end{pmatrix}
+    \end{split}
+\end{equation}
+
+With a constant A. Which yields 
+\begin{equation}
+    \begin{split}
+        \phi_{\text{eq}} = n*\pi, \quad \text{ for } n = 0,1,2...
+    \end{split}
+\end{equation}
+
+% \subsubsection{$\phi$ - Equilibrium}
+
+% From equation (\ref{eq:3.6.3}) we can see that the term $\sin\phi$ is present in every part of the expression so that we can say the equilibrium holds for $\phi = n*\pi$, for $n = 0,1,2,...$
+
+This makes sense as $\phi = n*\pi$ describes states where the square plate stays vertical. As we are not considering aerial drag (non-conservative forces) it is imaginable that this is an equilibrium. $\theta$ can be chosen arbitrarily which makes sense as the system is symmetric w.r.t. theta.
+
+\textbf{Note:} as for this case we have a scleronomic system we could have also just used the following:
+\begin{equation}
+    \begin{split}
+        \frac{\partial V}{\partial \text{\textbf{q}}} = \text{\textbf{0}}
+    \end{split}
+\end{equation}
+
+Which when plugging it in gives us:
+\begin{equation}
+    \left(\begin{array}{cc} \frac{981\,\sqrt{3}\,\sin\left(\phi _{\mathrm{eq}}\right)}{3200} & 0 \end{array}\right) = \text{\textbf{0}}
+\end{equation}
+
+Which is the same as equation (\ref{eq:3.6.4})
+% The same holds for a free rotation around A as can bee seen in equation (\ref{eq:3.6.4}).
+% \subsubsection{$\theta$ - Equilibrium}
+
+% Solving equation (\ref{eq:3.6.5}) we can see that $\ddot \theta$ has to be 0 and we thus recover a constant angular velocity around A. This makes sense as a constant, unconstrained velocity doesn't generate any forces. Note that if we considered the non-conservative forces from step \ref{subsec:3.4} that the equilibrium would be different.
+
+% \begin{equation}
+%     \begin{split}
+%         \begin{pmatrix} &\frac{L^2M\mathrm{\ddot \phi}}{3}+\frac{L^2M\mathrm{\ddot \theta}\left(6\cos\left(\phi \right)+4\sin\left(\beta \right)+3\cos\left(\beta \right)\cos\left(\phi \right)\right)}{12}+\frac{LMg\cos\left(\beta \right)\sin\left(\phi \right)}{2}+\frac{L^2M\mathrm{\dot \theta}\sin\left(\phi \right)\left(6\mathrm{\dot \phi}+3\mathrm{\dot \phi}\cos\left(\beta \right)+6\mathrm{\dot \theta}\sin\left(\beta \right)+3\mathrm{\dot \theta}\cos\left(\beta \right)\sin\left(\beta \right)-2\mathrm{\dot \theta}{\cos\left(\beta \right)}^2\cos\left(\phi \right)\right)}{12}-\frac{L^2M\mathrm{\dot \phi}\mathrm{\dot \theta}\sin\left(\phi \right)\left(\cos\left(\beta \right)+2\right)}{4}\\ 
+%             &\frac{L^2\mathrm{\ddot \theta}\left(16M+16m+12M\cos\left(\beta \right)+12m\cos\left(\beta \right)+2M{\cos\left(\beta \right)}^2+4m{\cos\left(\beta \right)}^2-2M{\cos\left(\beta \right)}^2{\cos\left(\phi \right)}^2+12M\cos\left(\phi \right)\sin\left(\beta \right)+6M\cos\left(\beta \right)\cos\left(\phi \right)\sin\left(\beta \right)\right)}{12}+\frac{L^2M\mathrm{\ddot \phi}\left(6\cos\left(\phi \right)+4\sin\left(\beta \right)+3\cos\left(\beta \right)\cos\left(\phi \right)\right)}{12}-\frac{L^2M\mathrm{\dot \phi}\sin\left(\phi \right)\left(6\mathrm{\dot \phi}+3\mathrm{\dot \phi}\cos\left(\beta \right)+12\mathrm{\dot \theta}\sin\left(\beta \right)+6\mathrm{\dot \theta}\cos\left(\beta \right)\sin\left(\beta \right)-4\mathrm{\dot \theta}{\cos\left(\beta \right)}^2\cos\left(\phi \right)\right)}{12} \end{pmatrix}
+%     \end{split}
+% \end{equation}
+
+Lastly when considering the non-conservative forces as well we get:
 
 \begin{equation}
     \begin{split}
-        \frac{\mathrm{thetadd}\,\left(3\,\cos\left(\phi \right)-\frac{3\,{\cos\left(\phi \right)}^2}{4}+\frac{21\,\sqrt{3}}{5}+\frac{3\,\sqrt{3}\,\cos\left(\phi \right)}{4}+\frac{251}{20}\right)}{192} = 0
+        \left(\begin{array}{c} \frac{981\,\sqrt{3}\,\sin\left(\phi _{\mathrm{eq}}\right)}{3200}\\ 0 \end{array}\right)
     \end{split}
 \end{equation}
 
-From equation \ref{eq:3.6.3} we can see that the term $\sin\phi$ is present in every part of the expression so that we can say the equilibrium holds for $\phi = n*\pi$, for $n = 0,1,2,...$
+Which in my eyes does not make sense. I believe through the drag force the vertical state of the square plate should not be an equilibrium.%TODO
 
-This makes sense as $\phi = n*\pi$ describes states where the square plate stays vertical. As we are not considering aerial drag it is imaginable that this is an equilibrium.
+\subsection{Integration}
 
-The same holds for a free rotation around A as can bee seen in equation \ref{eq:3.6.4}.
-
-For the equation w.r.t. $\theta$ we get a more complicated result.
