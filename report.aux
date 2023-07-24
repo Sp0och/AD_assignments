@@ -2,10 +2,13 @@
 \providecommand\hyper@newdestlabel[2]{}
 \providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
 \HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
+\global\let\oldcontentsline\contentsline
+\gdef\contentsline#1#2#3#4{\oldcontentsline{#1}{#2}{#3}}
 \global\let\oldnewlabel\newlabel
 \gdef\newlabel#1#2{\newlabelxx{#1}#2}
 \gdef\newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
 \AtEndDocument{\ifx\hyper@anchor\@undefined
+\let\contentsline\oldcontentsline
 \let\newlabel\oldnewlabel
 \fi}
 \fi}
@@ -62,39 +65,40 @@
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.5}Total Energy}{20}{subsubsection.3.3.5}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.6}Lagrange Equations}{20}{subsubsection.3.3.6}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Non Conservative Forces}{21}{subsection.3.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4}Assignment 4}{23}{section.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}DONE}{23}{subsection.4.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}DONE}{23}{subsection.4.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}DONE}{23}{subsection.4.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}DONE}{23}{subsection.4.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}}{23}{subsection.4.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.5.1}DONE}{23}{subsubsection.4.5.1}\protected@file@percent }
-\newlabel{eq:4.5.1}{{78}{23}{DONE}{equation.4.78}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Initial Position 1}}{23}{figure.9}\protected@file@percent }
-\newlabel{fig:init_1}{{9}{23}{Initial Position 1}{figure.9}{}}
-\newlabel{eq:4.5.2}{{79}{24}{DONE}{equation.4.79}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Equilibrium Position 1}}{24}{figure.10}\protected@file@percent }
-\newlabel{fig:eq_1}{{10}{24}{Equilibrium Position 1}{figure.10}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.5.2}Different Equilibrium states}{24}{subsubsection.4.5.2}\protected@file@percent }
-\newlabel{eq:4.5.3}{{80}{25}{Different Equilibrium states}{equation.4.80}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Initial Position 2}}{25}{figure.11}\protected@file@percent }
-\newlabel{fig:init_2}{{11}{25}{Initial Position 2}{figure.11}{}}
-\newlabel{eq:4.5.4}{{81}{26}{Different Equilibrium states}{equation.4.81}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Equilibrium Position 2}}{26}{figure.12}\protected@file@percent }
-\newlabel{fig:eq_2}{{12}{26}{Equilibrium Position 2}{figure.12}{}}
-\newlabel{eq:4.5.5}{{82}{26}{Different Equilibrium states}{equation.4.82}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Initial Position 3}}{27}{figure.13}\protected@file@percent }
-\newlabel{fig:init_3}{{13}{27}{Initial Position 3}{figure.13}{}}
-\newlabel{eq:4.5.6}{{83}{27}{Different Equilibrium states}{equation.4.83}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces Equilibrium Position 3}}{28}{figure.14}\protected@file@percent }
-\newlabel{fig:eq_3}{{14}{28}{Equilibrium Position 3}{figure.14}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.6}Analysis}{28}{subsection.4.6}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces Initial Position 4}}{29}{figure.15}\protected@file@percent }
-\newlabel{fig:init_4}{{15}{29}{Initial Position 4}{figure.15}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.7}DONE}{29}{subsection.4.7}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.8}Eigenmodes and Eigenfrequencies}{29}{subsection.4.8}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.8.1}DONE}{29}{subsubsection.4.8.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.8.2}Mode Shapes}{29}{subsubsection.4.8.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces Equilibrium Position 4}}{30}{figure.16}\protected@file@percent }
-\newlabel{fig:eq_4}{{16}{30}{Equilibrium Position 4}{figure.16}{}}
-\gdef \@abspage@last{30}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5}Values plugged in}{23}{subsection.3.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6}Equilibrium}{23}{subsection.3.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4}Assignment 4}{24}{section.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}DONE}{24}{subsection.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}DONE}{24}{subsection.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}DONE}{24}{subsection.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}DONE}{24}{subsection.4.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}}{24}{subsection.4.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.5.1}DONE}{24}{subsubsection.4.5.1}\protected@file@percent }
+\newlabel{eq:4.5.1}{{84}{24}{DONE}{equation.4.84}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Initial Position 1}}{24}{figure.9}\protected@file@percent }
+\newlabel{fig:init_1}{{9}{24}{Initial Position 1}{figure.9}{}}
+\newlabel{eq:4.5.2}{{85}{25}{DONE}{equation.4.85}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Equilibrium Position 1}}{25}{figure.10}\protected@file@percent }
+\newlabel{fig:eq_1}{{10}{25}{Equilibrium Position 1}{figure.10}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.5.2}Different Equilibrium states}{25}{subsubsection.4.5.2}\protected@file@percent }
+\newlabel{eq:4.5.3}{{86}{26}{Different Equilibrium states}{equation.4.86}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Initial Position 2}}{26}{figure.11}\protected@file@percent }
+\newlabel{fig:init_2}{{11}{26}{Initial Position 2}{figure.11}{}}
+\newlabel{eq:4.5.4}{{87}{27}{Different Equilibrium states}{equation.4.87}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Equilibrium Position 2}}{27}{figure.12}\protected@file@percent }
+\newlabel{fig:eq_2}{{12}{27}{Equilibrium Position 2}{figure.12}{}}
+\newlabel{eq:4.5.5}{{88}{27}{Different Equilibrium states}{equation.4.88}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Initial Position 3}}{28}{figure.13}\protected@file@percent }
+\newlabel{fig:init_3}{{13}{28}{Initial Position 3}{figure.13}{}}
+\newlabel{eq:4.5.6}{{89}{28}{Different Equilibrium states}{equation.4.89}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces Equilibrium Position 3}}{29}{figure.14}\protected@file@percent }
+\newlabel{fig:eq_3}{{14}{29}{Equilibrium Position 3}{figure.14}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6}Analysis}{29}{subsection.4.6}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces Initial Position 4}}{30}{figure.15}\protected@file@percent }
+\newlabel{fig:init_4}{{15}{30}{Initial Position 4}{figure.15}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.7}DONE}{30}{subsection.4.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.8}Eigenmodes and Eigenfrequencies}{30}{subsection.4.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.8.1}DONE}{30}{subsubsection.4.8.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.8.2}Mode Shapes}{30}{subsubsection.4.8.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces Equilibrium Position 4}}{31}{figure.16}\protected@file@percent }
+\newlabel{fig:eq_4}{{16}{31}{Equilibrium Position 4}{figure.16}{}}
