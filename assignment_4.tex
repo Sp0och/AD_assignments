@@ -314,87 +314,7 @@ And indeed when looking at the eigenvalues:
 \end{equation}
 
 We see that it's a stable equilibrium. From this we can take away that a perturbation from a stable equilibrium that is small enough will converge to the stable equilibrium.   
-
-\subsection{Drag and Damping}
-\subsubsection{Damping}
-The contributions to the damping force are:
-\begin{equation}
-    \begin{split}
-        Q_{\text{suspension back}} = \begin{pmatrix}
-            Q_{\text{susb(1)}}\\
-            0\\
-            0\\
-            0\\
-            0\\
-            0\\
-            0\\
-            0\\
-            0\\
-            Q_{\text{susb(2)}}\\
-            0
-        \end{pmatrix}
-    \end{split}
-\end{equation}
-Which has a contribution towards the rotation of the frame and the rotation of the back link. Both of these contributions have a negative sign which makes sense as the suspension of the back tire will lift the back wheel resulting in a rotation of the bar and the frame in negative Z direction.
-
-Analogous for the front suspension:
-\begin{equation}
-    \begin{split}
-        Q_{\text{suspension front}} = \begin{pmatrix}
-            Q_{\text{susf(1)}}\\
-            0\\
-            0\\
-            0\\
-            0\\
-            0\\
-            0\\
-            0\\
-            0\\
-            0\\
-            Q_{\text{susf(2)}}
-        \end{pmatrix}
-    \end{split}
-\end{equation}
-Therefore the front suspension force leads to an impact on the frame angle and the front link angle.
-
-\begin{equation}
-    \begin{split}
-        Q_\text{tire back} = \begin{pmatrix}
-            0\\
-            0\\
-            0\\
-            0\\
-            0\\
-            0\\
-            0\\
-            Q_\text{tB(9)}\\
-            0\\
-            0\\
-            0
-        \end{pmatrix}
-    \end{split}
-\end{equation}
-The back tire contact force has an impact on the elevation of the back tire.
-
-\begin{equation}
-    \begin{split}
-        Q_\text{tire front} = \begin{pmatrix}
-            0\\
-            0\\
-            0\\
-            0\\
-            0\\
-            0\\
-            0\\
-            Q_\text{tF(9)}\\
-            0\\
-            0\\
-            0
-        \end{pmatrix}
-    \end{split}
-\end{equation}
-This has an impact on the elevation of the front tire component.
-\subsubsection{}
+\subsection{Linearized Equations - DONE}
 \subsection{Eigenmodes and Eigenfrequencies}
 
 Looking at the eigenfrequencies in equation (\ref{eq:normal_eigenfrequencies}) we can see that the dominant ones with the large motion impact seem to be the first as well as the second and third.
@@ -487,3 +407,144 @@ If only these could be explained.
 
 \subsubsection{DONE}
 \subsubsection{Mode Shapes}
+
+\subsection{Drag and Damping}
+\subsubsection{Damping}
+The contributions to the damping force are:
+\begin{equation}
+    \begin{split}
+        Q_{\text{suspension back}} = \begin{pmatrix}
+            Q_{\text{susb(1)}}\\
+            0\\
+            0\\
+            0\\
+            0\\
+            0\\
+            0\\
+            0\\
+            0\\
+            Q_{\text{susb(2)}}\\
+            0
+        \end{pmatrix}
+    \end{split}
+\end{equation}
+Which has a contribution towards the rotation of the frame and the rotation of the back link. Both of these contributions have a negative sign which makes sense as the suspension of the back tire will lift the back wheel resulting in a rotation of the bar and the frame in negative Z direction.
+
+Analogous for the front suspension:
+\begin{equation}
+    \begin{split}
+        Q_{\text{suspension front}} = \begin{pmatrix}
+            Q_{\text{susf(1)}}\\
+            0\\
+            0\\
+            0\\
+            0\\
+            0\\
+            0\\
+            0\\
+            0\\
+            0\\
+            Q_{\text{susf(2)}}
+        \end{pmatrix}
+    \end{split}
+\end{equation}
+Therefore the front suspension force leads to an impact on the frame angle and the front link angle.
+
+Note: these two suspension forces come from the spring approximation of the reality.
+
+\begin{equation}
+    \begin{split}
+        Q_\text{tire back} = \begin{pmatrix}
+            0\\
+            0\\
+            0\\
+            0\\
+            0\\
+            0\\
+            0\\
+            Q_\text{tB(9)}\\
+            0\\
+            0\\
+            0
+        \end{pmatrix}
+    \end{split}
+\end{equation}
+The back tire contact force has an impact on the elevation of the back tire.
+
+\begin{equation}
+    \begin{split}
+        Q_\text{tire front} = \begin{pmatrix}
+            0\\
+            0\\
+            0\\
+            0\\
+            0\\
+            0\\
+            0\\
+            Q_\text{tF(9)}\\
+            0\\
+            0\\
+            0
+        \end{pmatrix}
+    \end{split}
+\end{equation}
+This has an impact on the elevation of the front tire component.
+\subsubsection{Drag Forces}
+\begin{equation}
+    \begin{split}
+        Q_\text{drag} =
+        \begin{pmatrix}
+            0\\
+-(63*\dot x_\text{fr}^2)/100\\
+                0\\
+                0\\
+                0\\
+                0\\
+                0\\
+                0\\
+                0\\
+                0\\
+                0
+        \end{pmatrix}
+    \end{split}
+\end{equation}
+This is the aerodynamic drag on the system. This can be nicely seen as there is only a negative component in the second row (depending on the velocity in this direction scquared) which corresponds to the x movement of the frame. Thus we have aerodynamic drag in that direction.
+
+\begin{equation}Q_\text{friction wheels} = 
+    \begin{pmatrix}
+        0\\
+        0\\
+        0\\
+-\dot\theta_\text{wF}^3/50000\\
+-\dot\theta_\text{wB}^3/50000\\
+        0\\
+        0\\
+        0\\
+        0\\
+        0\\
+        0
+    \end{pmatrix}
+\end{equation}
+Here we can nicely see friciton drag impacting the rotation of the front and the back wheel.
+
+Lastly we have for the torque:
+\begin{equation}
+    Q_\text{wheel} = 
+    \begin{pmatrix}
+        0\\
+        0\\
+        0\\
+        0\\
+        -300\\
+        0\\
+        0\\
+        0\\
+        0\\
+        0\\
+        0
+    \end{pmatrix}
+\end{equation}
+Representing the load applied in negative Z direction on the back wheel to make the car drive to the right.
+
+\subsection{Nonlinear Time Integration}
+
