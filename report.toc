@@ -39,7 +39,9 @@
 \contentsline {subsubsection}{\numberline {4.5.1}DONE}{25}{subsubsection.4.5.1}%
 \contentsline {subsubsection}{\numberline {4.5.2}Different Equilibrium states}{26}{subsubsection.4.5.2}%
 \contentsline {subsection}{\numberline {4.6}Analysis}{30}{subsection.4.6}%
-\contentsline {subsection}{\numberline {4.7}DONE}{33}{subsection.4.7}%
-\contentsline {subsection}{\numberline {4.8}Eigenmodes and Eigenfrequencies}{33}{subsection.4.8}%
-\contentsline {subsubsection}{\numberline {4.8.1}DONE}{34}{subsubsection.4.8.1}%
-\contentsline {subsubsection}{\numberline {4.8.2}Mode Shapes}{34}{subsubsection.4.8.2}%
+\contentsline {subsection}{\numberline {4.7}Drag and Damping}{33}{subsection.4.7}%
+\contentsline {subsubsection}{\numberline {4.7.1}Damping}{33}{subsubsection.4.7.1}%
+\contentsline {subsubsection}{\numberline {4.7.2}}{35}{subsubsection.4.7.2}%
+\contentsline {subsection}{\numberline {4.8}Eigenmodes and Eigenfrequencies}{35}{subsection.4.8}%
+\contentsline {subsubsection}{\numberline {4.8.1}DONE}{36}{subsubsection.4.8.1}%
+\contentsline {subsubsection}{\numberline {4.8.2}Mode Shapes}{36}{subsubsection.4.8.2}%

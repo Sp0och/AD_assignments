@@ -315,7 +315,86 @@ And indeed when looking at the eigenvalues:
 
 We see that it's a stable equilibrium. From this we can take away that a perturbation from a stable equilibrium that is small enough will converge to the stable equilibrium.   
 
-\subsection{DONE}
+\subsection{Drag and Damping}
+\subsubsection{Damping}
+The contributions to the damping force are:
+\begin{equation}
+    \begin{split}
+        Q_{\text{suspension back}} = \begin{pmatrix}
+            Q_{\text{susb(1)}}\\
+            0\\
+            0\\
+            0\\
+            0\\
+            0\\
+            0\\
+            0\\
+            0\\
+            Q_{\text{susb(2)}}\\
+            0
+        \end{pmatrix}
+    \end{split}
+\end{equation}
+Which has a contribution towards the rotation of the frame and the rotation of the back link. Both of these contributions have a negative sign which makes sense as the suspension of the back tire will lift the back wheel resulting in a rotation of the bar and the frame in negative Z direction.
+
+Analogous for the front suspension:
+\begin{equation}
+    \begin{split}
+        Q_{\text{suspension front}} = \begin{pmatrix}
+            Q_{\text{susf(1)}}\\
+            0\\
+            0\\
+            0\\
+            0\\
+            0\\
+            0\\
+            0\\
+            0\\
+            0\\
+            Q_{\text{susf(2)}}
+        \end{pmatrix}
+    \end{split}
+\end{equation}
+Therefore the front suspension force leads to an impact on the frame angle and the front link angle.
+
+\begin{equation}
+    \begin{split}
+        Q_\text{tire back} = \begin{pmatrix}
+            0\\
+            0\\
+            0\\
+            0\\
+            0\\
+            0\\
+            0\\
+            Q_\text{tB(9)}\\
+            0\\
+            0\\
+            0
+        \end{pmatrix}
+    \end{split}
+\end{equation}
+The back tire contact force has an impact on the elevation of the back tire.
+
+\begin{equation}
+    \begin{split}
+        Q_\text{tire front} = \begin{pmatrix}
+            0\\
+            0\\
+            0\\
+            0\\
+            0\\
+            0\\
+            0\\
+            Q_\text{tF(9)}\\
+            0\\
+            0\\
+            0
+        \end{pmatrix}
+    \end{split}
+\end{equation}
+This has an impact on the elevation of the front tire component.
+\subsubsection{}
 \subsection{Eigenmodes and Eigenfrequencies}
 
 Looking at the eigenfrequencies in equation (\ref{eq:normal_eigenfrequencies}) we can see that the dominant ones with the large motion impact seem to be the first as well as the second and third.

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.3.6)  24 JUL 2023 19:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.3.6)  25 JUL 2023 06:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -321,7 +321,7 @@ LaTeX Info: Redefining \nameref on input line 12.
 \openout4 = `report.toc'.
 
  [3] (/Users/lfierz/arbeiten/Latex/AD_assignments/assignment_1.tex
-<images/1.1.png, id=250, 975.645pt x 799.98875pt>
+<images/1.1.png, id=260, 975.645pt x 799.98875pt>
 File: images/1.1.png Graphic file (type png)
 <use images/1.1.png>
 Package pdftex.def Info: images/1.1.png  used on input line 3.
@@ -334,7 +334,7 @@ Overfull \hbox (45.25108pt too wide) in paragraph at lines 3--4
 [4
 
  </Users/lfierz/arbeiten/Latex/AD_assignments/images/1.1.png>]
-<images/1.1.3.png, id=260, 575.14874pt x 75.28125pt>
+<images/1.1.3.png, id=270, 575.14874pt x 75.28125pt>
 File: images/1.1.3.png Graphic file (type png)
 <use images/1.1.3.png>
 Package pdftex.def Info: images/1.1.3.png  used on input line 86.
@@ -342,7 +342,7 @@ Package pdftex.def Info: images/1.1.3.png  used on input line 86.
  [5
 
 ] [6 </Users/lfierz/arbeiten/Latex/AD_assignments/images/1.1.3.png>]
-<images/1.2.png, id=289, 951.555pt x 712.6625pt>
+<images/1.2.png, id=299, 951.555pt x 712.6625pt>
 File: images/1.2.png Graphic file (type png)
 <use images/1.2.png>
 Package pdftex.def Info: images/1.2.png  used on input line 98.
@@ -362,7 +362,7 @@ Overfull \hbox (30.82007pt too wide) detected at line 219
 [9
 
 ]) [10] (/Users/lfierz/arbeiten/Latex/AD_assignments/assignment_2.tex
-<images/Hamilton.png, id=326, 1770.615pt x 546.04pt>
+<images/Hamilton.png, id=336, 1770.615pt x 546.04pt>
 File: images/Hamilton.png Graphic file (type png)
 <use images/Hamilton.png>
 Package pdftex.def Info: images/Hamilton.png  used on input line 35.
@@ -380,12 +380,12 @@ Overfull \hbox (24.25307pt too wide) detected at line 105
  []
 
 [12] [13]) [14] (/Users/lfierz/arbeiten/Latex/AD_assignments/assignment_3.tex
-<images/inertial_frame.png, id=373, 360.34625pt x 284.56313pt>
+<images/inertial_frame.png, id=383, 360.34625pt x 284.56313pt>
 File: images/inertial_frame.png Graphic file (type png)
 <use images/inertial_frame.png>
 Package pdftex.def Info: images/inertial_frame.png  used on input line 9.
 (pdftex.def)             Requested size: 180.17268pt x 142.2812pt.
-<images/vertical_frame.png, id=374, 350.81062pt x 273.02pt>
+<images/vertical_frame.png, id=384, 350.81062pt x 273.02pt>
 File: images/vertical_frame.png Graphic file (type png)
 <use images/vertical_frame.png>
 Package pdftex.def Info: images/vertical_frame.png  used on input line 19.
@@ -393,12 +393,12 @@ Package pdftex.def Info: images/vertical_frame.png  used on input line 19.
  [15
 
  </Users/lfierz/arbeiten/Latex/AD_assignments/images/inertial_frame.png> </Users/lfierz/arbeiten/Latex/AD_assignments/images/vertical_frame.png>]
-<images/rod_frame.png, id=383, 333.245pt x 277.53688pt>
+<images/rod_frame.png, id=393, 333.245pt x 277.53688pt>
 File: images/rod_frame.png Graphic file (type png)
 <use images/rod_frame.png>
 Package pdftex.def Info: images/rod_frame.png  used on input line 30.
 (pdftex.def)             Requested size: 166.62209pt x 138.7681pt.
-<images/square_frame.png, id=384, 347.79938pt x 270.00874pt>
+<images/square_frame.png, id=394, 347.79938pt x 270.00874pt>
 File: images/square_frame.png Graphic file (type png)
 <use images/square_frame.png>
 Package pdftex.def Info: images/square_frame.png  used on input line 40.
@@ -421,7 +421,7 @@ Overfull \hbox (55.819pt too wide) detected at line 306
  []
 
 [21] [22] [23]) [24] (/Users/lfierz/arbeiten/Latex/AD_assignments/assignment_4.tex
-<images/q_init_1.jpg, id=471, 1124.2pt x 843.15pt>
+<images/q_init_1.jpg, id=481, 1124.2pt x 843.15pt>
 File: images/q_init_1.jpg Graphic file (type jpg)
 <use images/q_init_1.jpg>
 Package pdftex.def Info: images/q_init_1.jpg  used on input line 32.
@@ -429,30 +429,30 @@ Package pdftex.def Info: images/q_init_1.jpg  used on input line 32.
  [25
 
  </Users/lfierz/arbeiten/Latex/AD_assignments/images/q_init_1.jpg>]
-<images/Equilibrium1.jpg, id=479, 1124.2pt x 843.15pt>
+<images/Equilibrium1.jpg, id=489, 1124.2pt x 843.15pt>
 File: images/Equilibrium1.jpg Graphic file (type jpg)
 <use images/Equilibrium1.jpg>
 Package pdftex.def Info: images/Equilibrium1.jpg  used on input line 63.
 (pdftex.def)             Requested size: 264.18704pt x 198.14027pt.
  [26 </Users/lfierz/arbeiten/Latex/AD_assignments/images/Equilibrium1.jpg>]
-<images/q_init_2.jpg, id=486, 1124.2pt x 843.15pt>
+<images/q_init_2.jpg, id=496, 1124.2pt x 843.15pt>
 File: images/q_init_2.jpg Graphic file (type jpg)
 <use images/q_init_2.jpg>
 Package pdftex.def Info: images/q_init_2.jpg  used on input line 104.
 (pdftex.def)             Requested size: 264.18704pt x 198.14027pt.
  [27 </Users/lfierz/arbeiten/Latex/AD_assignments/images/q_init_2.jpg>]
-<images/Equilibrium2.jpg, id=493, 1124.2pt x 843.15pt>
+<images/Equilibrium2.jpg, id=503, 1124.2pt x 843.15pt>
 File: images/Equilibrium2.jpg Graphic file (type jpg)
 <use images/Equilibrium2.jpg>
 Package pdftex.def Info: images/Equilibrium2.jpg  used on input line 139.
 (pdftex.def)             Requested size: 264.18704pt x 198.14027pt.
-<images/q_init_3.jpg, id=494, 1124.2pt x 843.15pt>
+<images/q_init_3.jpg, id=504, 1124.2pt x 843.15pt>
 File: images/q_init_3.jpg Graphic file (type jpg)
 <use images/q_init_3.jpg>
 Package pdftex.def Info: images/q_init_3.jpg  used on input line 170.
 (pdftex.def)             Requested size: 264.18704pt x 198.14027pt.
  [28 </Users/lfierz/arbeiten/Latex/AD_assignments/images/Equilibrium2.jpg>] [29 </Users/lfierz/arbeiten/Latex/AD_assignments/images/q_init_3.jpg>]
-<images/Equilibrium3.jpg, id=508, 1124.2pt x 843.15pt>
+<images/Equilibrium3.jpg, id=518, 1124.2pt x 843.15pt>
 File: images/Equilibrium3.jpg Graphic file (type jpg)
 <use images/Equilibrium3.jpg>
 Package pdftex.def Info: images/Equilibrium3.jpg  used on input line 201.
@@ -465,43 +465,44 @@ Underfull \hbox (badness 10000) in paragraph at lines 229--230
 [30
 
  </Users/lfierz/arbeiten/Latex/AD_assignments/images/Equilibrium3.jpg>] [31]
-<images/q_init_4.jpg, id=524, 1124.2pt x 843.15pt>
+<images/q_init_4.jpg, id=535, 1124.2pt x 843.15pt>
 File: images/q_init_4.jpg Graphic file (type jpg)
 <use images/q_init_4.jpg>
 Package pdftex.def Info: images/q_init_4.jpg  used on input line 283.
 (pdftex.def)             Requested size: 264.18704pt x 198.14027pt.
-<images/Equilibrium4.jpg, id=526, 1124.2pt x 843.15pt>
+<images/Equilibrium4.jpg, id=537, 1124.2pt x 843.15pt>
 File: images/Equilibrium4.jpg Graphic file (type jpg)
 <use images/Equilibrium4.jpg>
 Package pdftex.def Info: images/Equilibrium4.jpg  used on input line 292.
 (pdftex.def)             Requested size: 264.18704pt x 198.14027pt.
  [32
 
- </Users/lfierz/arbeiten/Latex/AD_assignments/images/q_init_4.jpg>] [33 </Users/lfierz/arbeiten/Latex/AD_assignments/images/Equilibrium4.jpg>]
-<images/mode1.jpg, id=541, 1124.2pt x 843.15pt>
+ </Users/lfierz/arbeiten/Latex/AD_assignments/images/q_init_4.jpg>] [33 </Users/lfierz/arbeiten/Latex/AD_assignments/images/Equilibrium4.jpg>] [34]
+<images/mode1.jpg, id=558, 1124.2pt x 843.15pt>
 File: images/mode1.jpg Graphic file (type jpg)
 <use images/mode1.jpg>
-Package pdftex.def Info: images/mode1.jpg  used on input line 385.
+Package pdftex.def Info: images/mode1.jpg  used on input line 464.
 (pdftex.def)             Requested size: 264.18704pt x 198.14027pt.
-<images/mode2.jpg, id=542, 1124.2pt x 843.15pt>
+ [35]
+<images/mode2.jpg, id=566, 1124.2pt x 843.15pt>
 File: images/mode2.jpg Graphic file (type jpg)
 <use images/mode2.jpg>
-Package pdftex.def Info: images/mode2.jpg  used on input line 393.
+Package pdftex.def Info: images/mode2.jpg  used on input line 472.
 (pdftex.def)             Requested size: 264.18704pt x 198.14027pt.
-<images/mode3.jpg, id=543, 1124.2pt x 843.15pt>
+<images/mode3.jpg, id=567, 1124.2pt x 843.15pt>
 File: images/mode3.jpg Graphic file (type jpg)
 <use images/mode3.jpg>
-Package pdftex.def Info: images/mode3.jpg  used on input line 401.
+Package pdftex.def Info: images/mode3.jpg  used on input line 480.
 (pdftex.def)             Requested size: 264.18704pt x 198.14027pt.
 )
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 29.
- [34] [35 </Users/lfierz/arbeiten/Latex/AD_assignments/images/mode1.jpg> </Users/lfierz/arbeiten/Latex/AD_assignments/images/mode2.jpg>] [36 </Users/lfierz/arbeiten/Latex/AD_assignments/images/mode3.jpg>]
+ [36 </Users/lfierz/arbeiten/Latex/AD_assignments/images/mode1.jpg>] [37 </Users/lfierz/arbeiten/Latex/AD_assignments/images/mode2.jpg> </Users/lfierz/arbeiten/Latex/AD_assignments/images/mode3.jpg>]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 29.
  (/Users/lfierz/arbeiten/Latex/AD_assignments/report.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 29.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 29.
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: D34CE34F9FAF17F273EADF9C53F3419F;2979.
+(rerunfilecheck)             Checksum: 3815EB37AF2BD17C5255DB4DB9677B02;3118.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -509,18 +510,18 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 29.
  ) 
 Here is how much of TeX's memory you used:
- 7475 strings out of 480608
- 113064 string characters out of 5903631
+ 7484 strings out of 480608
+ 113207 string characters out of 5903631
  391633 words of memory out of 5000000
- 22992 multiletter control sequences out of 15000+600000
+ 22994 multiletter control sequences out of 15000+600000
  540170 words of font info for 51 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  37i,24n,37p,919b,356s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on /Users/lfierz/arbeiten/Latex/AD_assignments/report.pdf (36 pages, 1296156 bytes).
+Output written on /Users/lfierz/arbeiten/Latex/AD_assignments/report.pdf (37 pages, 1298429 bytes).
 PDF statistics:
- 654 PDF objects out of 1000 (max. 8388607)
- 568 compressed objects within 6 object streams
- 208 named destinations out of 1000 (max. 500000)
- 456 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 676 PDF objects out of 1000 (max. 8388607)
+ 589 compressed objects within 6 object streams
+ 215 named destinations out of 1000 (max. 500000)
+ 472 words of extra memory for PDF output out of 10000 (max. 10000000)
 
