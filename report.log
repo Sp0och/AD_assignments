@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2023.1.17)  25 JUL 2023 07:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2023.1.17)  25 JUL 2023 12:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -343,7 +343,7 @@ Package hyperref Info: Link coloring OFF on input line 12.
 \openout4 = `report.toc'.
 
  [3] (assignment_1.tex
-<images/1.1.png, id=268, 975.645pt x 799.98875pt>
+<images/1.1.png, id=318, 975.645pt x 799.98875pt>
 File: images/1.1.png Graphic file (type png)
 <use images/1.1.png>
 Package pdftex.def Info: images/1.1.png  used on input line 3.
@@ -356,7 +356,7 @@ Overfull \hbox (45.25108pt too wide) in paragraph at lines 3--4
 [4
 
  <./images/1.1.png>]
-<images/1.1.3.png, id=278, 575.14874pt x 75.28125pt>
+<images/1.1.3.png, id=328, 575.14874pt x 75.28125pt>
 File: images/1.1.3.png Graphic file (type png)
 <use images/1.1.3.png>
 Package pdftex.def Info: images/1.1.3.png  used on input line 86.
@@ -364,7 +364,7 @@ Package pdftex.def Info: images/1.1.3.png  used on input line 86.
  [5
 
 ] [6 <./images/1.1.3.png>]
-<images/1.2.png, id=307, 951.555pt x 712.6625pt>
+<images/1.2.png, id=357, 951.555pt x 712.6625pt>
 File: images/1.2.png Graphic file (type png)
 <use images/1.2.png>
 Package pdftex.def Info: images/1.2.png  used on input line 98.
@@ -384,7 +384,7 @@ Overfull \hbox (30.82007pt too wide) detected at line 219
 [9
 
 ]) [10] (assignment_2.tex
-<images/Hamilton.png, id=343, 1770.615pt x 546.04pt>
+<images/Hamilton.png, id=393, 1770.615pt x 546.04pt>
 File: images/Hamilton.png Graphic file (type png)
 <use images/Hamilton.png>
 Package pdftex.def Info: images/Hamilton.png  used on input line 35.
@@ -402,12 +402,12 @@ Overfull \hbox (24.25307pt too wide) detected at line 105
  []
 
 [12] [13]) [14] (assignment_3.tex
-<images/inertial_frame.png, id=390, 360.34625pt x 284.56313pt>
+<images/inertial_frame.png, id=440, 360.34625pt x 284.56313pt>
 File: images/inertial_frame.png Graphic file (type png)
 <use images/inertial_frame.png>
 Package pdftex.def Info: images/inertial_frame.png  used on input line 9.
 (pdftex.def)             Requested size: 180.17268pt x 142.2812pt.
-<images/vertical_frame.png, id=391, 350.81062pt x 273.02pt>
+<images/vertical_frame.png, id=441, 350.81062pt x 273.02pt>
 File: images/vertical_frame.png Graphic file (type png)
 <use images/vertical_frame.png>
 Package pdftex.def Info: images/vertical_frame.png  used on input line 19.
@@ -415,12 +415,12 @@ Package pdftex.def Info: images/vertical_frame.png  used on input line 19.
  [15
 
  <./images/inertial_frame.png> <./images/vertical_frame.png>]
-<images/rod_frame.png, id=400, 333.245pt x 277.53688pt>
+<images/rod_frame.png, id=450, 333.245pt x 277.53688pt>
 File: images/rod_frame.png Graphic file (type png)
 <use images/rod_frame.png>
 Package pdftex.def Info: images/rod_frame.png  used on input line 30.
 (pdftex.def)             Requested size: 166.62209pt x 138.7681pt.
-<images/square_frame.png, id=401, 347.79938pt x 270.00874pt>
+<images/square_frame.png, id=451, 347.79938pt x 270.00874pt>
 File: images/square_frame.png Graphic file (type png)
 <use images/square_frame.png>
 Package pdftex.def Info: images/square_frame.png  used on input line 40.
@@ -443,7 +443,7 @@ Overfull \hbox (55.819pt too wide) detected at line 306
  []
 
 [21] [22] [23]) [24] (assignment_4.tex
-<images/q_init_1.jpg, id=487, 1124.2pt x 843.15pt>
+<images/q_init_1.jpg, id=538, 1124.2pt x 843.15pt>
 File: images/q_init_1.jpg Graphic file (type jpg)
 <use images/q_init_1.jpg>
 Package pdftex.def Info: images/q_init_1.jpg  used on input line 32.
@@ -451,30 +451,30 @@ Package pdftex.def Info: images/q_init_1.jpg  used on input line 32.
  [25
 
  <./images/q_init_1.jpg>]
-<images/Equilibrium1.jpg, id=495, 1124.2pt x 843.15pt>
+<images/Equilibrium1.jpg, id=546, 1124.2pt x 843.15pt>
 File: images/Equilibrium1.jpg Graphic file (type jpg)
 <use images/Equilibrium1.jpg>
 Package pdftex.def Info: images/Equilibrium1.jpg  used on input line 63.
 (pdftex.def)             Requested size: 264.18704pt x 198.14027pt.
  [26 <./images/Equilibrium1.jpg>]
-<images/q_init_2.jpg, id=502, 1124.2pt x 843.15pt>
+<images/q_init_2.jpg, id=553, 1124.2pt x 843.15pt>
 File: images/q_init_2.jpg Graphic file (type jpg)
 <use images/q_init_2.jpg>
 Package pdftex.def Info: images/q_init_2.jpg  used on input line 104.
 (pdftex.def)             Requested size: 264.18704pt x 198.14027pt.
  [27 <./images/q_init_2.jpg>]
-<images/Equilibrium2.jpg, id=509, 1124.2pt x 843.15pt>
+<images/Equilibrium2.jpg, id=560, 1124.2pt x 843.15pt>
 File: images/Equilibrium2.jpg Graphic file (type jpg)
 <use images/Equilibrium2.jpg>
 Package pdftex.def Info: images/Equilibrium2.jpg  used on input line 139.
 (pdftex.def)             Requested size: 264.18704pt x 198.14027pt.
-<images/q_init_3.jpg, id=510, 1124.2pt x 843.15pt>
+<images/q_init_3.jpg, id=561, 1124.2pt x 843.15pt>
 File: images/q_init_3.jpg Graphic file (type jpg)
 <use images/q_init_3.jpg>
 Package pdftex.def Info: images/q_init_3.jpg  used on input line 170.
 (pdftex.def)             Requested size: 264.18704pt x 198.14027pt.
  [28 <./images/Equilibrium2.jpg>] [29 <./images/q_init_3.jpg>]
-<images/Equilibrium3.jpg, id=524, 1124.2pt x 843.15pt>
+<images/Equilibrium3.jpg, id=575, 1124.2pt x 843.15pt>
 File: images/Equilibrium3.jpg Graphic file (type jpg)
 <use images/Equilibrium3.jpg>
 Package pdftex.def Info: images/Equilibrium3.jpg  used on input line 201.
@@ -487,12 +487,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 229--230
 [30
 
  <./images/Equilibrium3.jpg>] [31]
-<images/q_init_4.jpg, id=540, 1124.2pt x 843.15pt>
+<images/q_init_4.jpg, id=591, 1124.2pt x 843.15pt>
 File: images/q_init_4.jpg Graphic file (type jpg)
 <use images/q_init_4.jpg>
 Package pdftex.def Info: images/q_init_4.jpg  used on input line 283.
 (pdftex.def)             Requested size: 264.18704pt x 198.14027pt.
-<images/Equilibrium4.jpg, id=542, 1124.2pt x 843.15pt>
+<images/Equilibrium4.jpg, id=593, 1124.2pt x 843.15pt>
 File: images/Equilibrium4.jpg Graphic file (type jpg)
 <use images/Equilibrium4.jpg>
 Package pdftex.def Info: images/Equilibrium4.jpg  used on input line 292.
@@ -500,17 +500,17 @@ Package pdftex.def Info: images/Equilibrium4.jpg  used on input line 292.
  [32
 
  <./images/q_init_4.jpg>] [33 <./images/Equilibrium4.jpg>]
-<images/mode1.jpg, id=556, 1124.2pt x 843.15pt>
+<images/mode1.jpg, id=607, 1124.2pt x 843.15pt>
 File: images/mode1.jpg Graphic file (type jpg)
 <use images/mode1.jpg>
 Package pdftex.def Info: images/mode1.jpg  used on input line 384.
 (pdftex.def)             Requested size: 264.18704pt x 198.14027pt.
-<images/mode2.jpg, id=557, 1124.2pt x 843.15pt>
+<images/mode2.jpg, id=608, 1124.2pt x 843.15pt>
 File: images/mode2.jpg Graphic file (type jpg)
 <use images/mode2.jpg>
 Package pdftex.def Info: images/mode2.jpg  used on input line 392.
 (pdftex.def)             Requested size: 264.18704pt x 198.14027pt.
-<images/mode3.jpg, id=558, 1124.2pt x 843.15pt>
+<images/mode3.jpg, id=609, 1124.2pt x 843.15pt>
 File: images/mode3.jpg Graphic file (type jpg)
 <use images/mode3.jpg>
 Package pdftex.def Info: images/mode3.jpg  used on input line 400.
@@ -519,27 +519,21 @@ Package pdftex.def Info: images/mode3.jpg  used on input line 400.
 
 LaTeX Warning: There were multiply-defined labels.
 
-
-Package rerunfilecheck Warning: File `report.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `report.out':
-(rerunfilecheck)             Before: E48045DADABF944939DA56463099382B;6407
-(rerunfilecheck)             After:  0EFBA759C18DBF4E5597239FF4DDBF06;6460.
+Package rerunfilecheck Info: File `report.out' has not changed.
+(rerunfilecheck)             Checksum: 88425FD47C6130ED2E895553AE4A816B;7225.
  ) 
 Here is how much of TeX's memory you used:
- 10724 strings out of 475385
- 171630 string characters out of 2776907
- 528874 words of memory out of 3000000
- 31704 multiletter control sequences out of 15000+600000
+ 10745 strings out of 475385
+ 172044 string characters out of 2776907
+ 528880 words of memory out of 3000000
+ 31714 multiletter control sequences out of 15000+600000
  477091 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  72i,24n,77p,924b,469s stack positions out of 10000i,1000n,20000p,200000b,80000s
 <C:/Users/fierz/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/fierz/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/fierz/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx7.pfb><C:/Users/fierz/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/fierz/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/fierz/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/fierz/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Users/fierz/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb><C:/Users/fierz/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/fierz/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/fierz/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/fierz/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/fierz/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/fierz/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/fierz/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on report.pdf (39 pages, 1382103 bytes).
+Output written on report.pdf (39 pages, 1389154 bytes).
 PDF statistics:
- 709 PDF objects out of 1000 (max. 8388607)
- 222 named destinations out of 1000 (max. 500000)
- 488 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 762 PDF objects out of 1000 (max. 8388607)
+ 233 named destinations out of 1000 (max. 500000)
+ 568 words of extra memory for PDF output out of 10000 (max. 10000000)
 
