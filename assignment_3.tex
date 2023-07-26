@@ -479,14 +479,42 @@ Lastly when considering the non-conservative forces as well we get:
     \end{split}
 \end{equation}
 
-Which is the same equilibrium configuration as for the case with the free rotation of the vertical shaft.%TODO
+Which is the same equilibrium configuration as for the case with the free rotation of the vertical shaft.
+\clearpage
+%\HERE
+Looking at the equations of motion for the case of constant rotation around the vertical shaft whilst considering the non-conservative forces:
 
 \begin{equation}
     \begin{split}
         &\frac{\Omega }{7680}+\frac{\Omega \,\cos\left(\phi _{\mathrm{eq}}\right)}{2560}+\frac{981\,\sqrt{3}\,\sin\left(\phi _{\mathrm{eq}}\right)}{3200}+\frac{\Omega ^2\,\sin\left(\phi _{\mathrm{eq}}\right)}{128}+\frac{\sqrt{3}\,\Omega ^2\,\sin\left(\phi _{\mathrm{eq}}\right)}{512}\\
-        &-\frac{\Omega ^2\,\cos\left(\phi _{\mathrm{eq}}\right)\,\sin\left(\phi _{\mathrm{eq}}\right)}{256}+\frac{\sqrt{3}\,\Omega \,\cos\left(\phi _{\mathrm{eq}}\right)}{10240}
+        &-\frac{\Omega ^2\,\cos\left(\phi _{\mathrm{eq}}\right)\,\sin\left(\phi _{\mathrm{eq}}\right)}{256}+\frac{\sqrt{3}\,\Omega \,\cos\left(\phi _{\mathrm{eq}}\right)}{10240} = 0
     \end{split}
 \end{equation}
 
+From the first view we can see that $\phi = 0$ is not the solution anymore which makes sense because the non-conservative forces simulate aerial drag which would induce a tilt in the square when rotating at a constant angular velocity.
+
+Trying to solve this equation yielded no solution for $\phi_{eq}$. This can be interpreted as follows: We have a constant angular velocity around the vertical shaft. This rotation induces a velocity in the bar, the rod and the square plate. This generates a drag force on the square plate which will remain there as long as there is an angular velocity and therefore no equilibrium can be reached.
+
+
+
 \subsection{Integration}
 
+To integrate the system w.r.t. time the idea is to 
+\begin{enumerate}
+    \item Get the linearized equations $M\ddot {\tilde {q}} + D\dot {\tilde {q}} + K\tilde {q} = 0$, \\
+    Where $\tilde q$ defines a small perturbation of the generalized coordinates from the equilibrium configuration.
+    \item Build the state space representation $Ar + B\dot r = s$,\\
+    Where $r = \begin{pmatrix}
+        \tilde {q}\\
+        \dot {\tilde {q}}
+    \end{pmatrix}$, $A = \begin{pmatrix}
+        K & 0\\
+        0 & -M
+    \end{pmatrix}$, $B = \begin{pmatrix}
+        D & M\\
+        M & 0
+    \end{pmatrix}$ and $s = \begin{pmatrix}
+        F\\0
+    \end{pmatrix}$
+    \item Use standart solution $r = Ze^{\lambda t} \Rightarrow Ar + \lambda B r = 0$ 
+\end{enumerate}
