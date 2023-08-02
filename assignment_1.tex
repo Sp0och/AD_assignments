@@ -1,3 +1,4 @@
+\subsection{Wheel Rolling Without Slipping}
 \begin{figure}[ht]
     \centering
     \includegraphics[scale=0.4]{images/1.1.png}
@@ -6,9 +7,7 @@
     \label{fig:task1.1}
 \end{figure}
 \clearpage
-
-\subsection{}
-\subsubsection{}\label{subsubsec:1.1.1}
+\subsubsection{Constraints}\label{subsubsec:1.1.1}
 The list of constraints looks as follows:
 
 \begin{enumerate}
@@ -77,9 +76,9 @@ As $\alpha$ is not dependent on time it can be easily seen that (\ref{eq:1.3}) i
 %         \dot x_1^C\boldsymbol{e_1} - R\dot\phi\sin\alpha\boldsymbol{e_1} = \sum_{i=1}^n \frac{\partial f(\boldsymbol{q},t)}{x_1^C}\dot x_1^C + \frac{\partial f(\boldsymbol{q},t)}{\phi}\dot \phi
 %     \end{split}
 % \end{equation}
-\subsubsection{}
+\subsubsection{Constraint Explanation}
 See subsubsection (\ref{subsubsec:1.1.1})
-\subsubsection{}
+\subsubsection{Degrees of freedom}
 
 \begin{figure}[ht]
     \centering
@@ -91,8 +90,7 @@ See subsubsection (\ref{subsubsec:1.1.1})
 
 \noindent As we have a 3D body with 6 generalized coordinates (here 5 are given, already considering constraint 1) and 5 holonomic constraints. We get a total of $6 - 5 = 1$ degree of freedom. That could for instance be the rotation of the wheel around $\boldsymbol{e_\phi}$ while all the other generalized coordinates follow accordingly.
 
-\clearpage
-
+\subsection{Two Bars Linkage}\label{subsec:1.2}
 \begin{figure}[ht]
     \centering
     \includegraphics[scale=0.4]{images/1.2.png}
@@ -100,7 +98,6 @@ See subsubsection (\ref{subsubsec:1.1.1})
     %label always in the end
     \label{fig:task1.2}
 \end{figure}
-\subsection{}\label{subsec:1.2}
 
 I want to show that the constraint that $v_c$ always points in the direction of $AD$ is not integrable. I would like to express this constraint as:
 \begin{equation}
@@ -198,7 +195,6 @@ Writing down the coefficients of the non-holonomic constraint:
     \end{split}
 \end{equation}
 
-\clearpage
 To check for the exact velocity form we want to proof that there can't exist a $C(q) \neq 0$ for which holds:
 
 \begin{equation}

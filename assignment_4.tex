@@ -403,7 +403,7 @@ Plotted out we get the following configurations:
     \label{fig:mode_3}
 \end{figure}
 
-If only these could be explained.
+This result I am not sure about at the current time.
 
 \subsubsection{DONE}
 \subsubsection{Mode Shapes}
@@ -547,15 +547,143 @@ Lastly we have for the torque:
 Representing the load applied in negative Z direction on the back wheel to make the car drive to the right.
 
 \subsection{Nonlinear Time Integration}
-\subsubsection{}
-\subsubsection{}
-\subsubsection{}
-\subsubsection{}
-\subsection{Adding Wings}
-\subsubsection{}
-\subsubsection{}
-\subsubsection{}
-\subsubsection{}
-\subsection{Harmonic Response}
+\textbf{Speed of the Car:}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.4]{images/convergence_speed_of_car.jpg}
+    \caption{Speed of Car with convergence speed indicated}
+    %label always in the end
+    \label{fig:convergence_speed}
+\end{figure}
 
+As we can see in figure \ref{fig:convergence_speed} the horizontal velocity converges towards 33.64 m/s which is equivalent to 120.6 km/h. (When performing the integration for a longer time interval the more exact convergence value is 33.6466) Also for an acceleration to 80 km/h ($= 22.22 $ m/s) it takes about 2.8s.
+\clearpage %HERE
+
+\subsubsection{Horizontal displacement of the frame}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.4]{images/horizontal_displacement.jpg}
+    \caption{Horizontal Displacement}
+    %label always in the end
+    \label{fig:horizontal_displacement}
+\end{figure}
+
+Here above we can nicely the horizontal displacement with time. As already assumed the displacement starts at zero and at one point behaves linear in time due to the constant velocity which can be seen in figure \ref{fig:convergence_speed}.
+\clearpage %HERE
+
+\subsubsection{Vertical displacement of the frame}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.4]{images/vertical_displacement.jpg}
+    \caption{Vertical Displacement}
+    %label always in the end
+    \label{fig:vertical_displacement}
+\end{figure}
+Here we can see a very small oscillating displacement which converges towards 0.
+\clearpage %HERE
+
+\subsubsection{Wheel-ground elastic forces}
+As the wheel-ground elastic forces are modelled with linear springs we have:
+\begin{equation}
+    \begin{split}
+        &f_\text{Contact} = k_\text{Contact} * \Delta y_\text{tF}\\
+        & \text{ with } \Delta y_\text{tF} = |y_\text{tF}-r_\text{tire}|
+    \end{split}
+\end{equation}
+And thus for the elastic forces of the tire we get the following plot:
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.4]{images/wheel-ground_elastic_forces.jpg}
+    \caption{Elastic Contact Forces}
+    %label always in the end
+    \label{fig:contact_forces}
+\end{figure}
+
+\clearpage %HERE
+\subsubsection{orientation of the rear linkage}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.4]{images/rear_linkage_angle.jpg}
+    \caption{Rear Linkage angle}
+    %label always in the end
+    \label{fig:rear_linkage_angle}
+\end{figure}
+\subsection{Adding Wings}
+To add the effect of the wings to the car we have to derive the contribution of the generalized forces. For this we calculate the work done at either wing and consider the derivate w.r.t. q. 
+\begin{equation}
+    \begin{split}
+        Q_\text{L Front} = \frac{\partial}{\partial q}W_\text{L Front}
+    \end{split}
+\end{equation}
+For the work done we multiply the force with the respective velocity component. 
+
+The velocity component consists of both ends of the rigid body translation and the contribution from the frame rotation.
+\begin{equation}
+    \begin{split}
+        v_F = v_\text{Frame} + \begin{pmatrix}
+            0\\0\\\dot\theta
+        \end{pmatrix} \times \begin{pmatrix}
+            x_F\\
+            y_F\\
+            0
+        \end{pmatrix}
+    \end{split}
+\end{equation}
+\begin{equation}
+    \begin{split}
+        \Rightarrow W_\text{L Front} = F_\text{L Front} * v_F
+    \end{split}
+\end{equation}
+\subsubsection{Horizontal Displacement of the Frame}   
+Implementing the above contribution of the wings in the code yields the following plots: 
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.4]{images/horizontal_displacement_wings.jpg}
+    \caption{Horizontal Displacement with Wings}
+    %label always in the end
+    \label{fig:horizontal_wings}
+\end{figure}
+The distance covered as can be seen above is significantly less than for the case without wings. This is due to the drag induced by the wings.
+\clearpage %HERE
+\subsubsection{Vertical Displacement of the Frame}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.4]{images/vertical_displacement_wings.jpg}
+    \caption{Vertical Displacement with Wings}
+    %label always in the end
+    \label{fig:vertical_wings}
+\end{figure}
+The vertical displacement is stable at first and then the car gains altitude rapidly. As the wings induce drag forces the car seems to tip over at the front resulting in an elevation of the center of mass.
+\clearpage %HERE
+\subsubsection{Wheel-Ground Elastic Forces}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.4]{images/wheel-ground_elastic_forces_wings.jpg}
+    \caption{Elastic Contact Forces with Wings}
+    %label always in the end
+    \label{fig:elastic_forces_wings}
+\end{figure}
+Starting off we see the elastic force in the same range as without the wings. Around the 5 second mark the elastic force increases by a lot. This is the same point in time as the aforementioned supposed tipping of the car.
+\clearpage %HERE
+\subsubsection{Orientation of the Rear Linkage}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.35]{images/rear_linkage_angle_with_wings.jpg}
+    \caption{Rear Linkage Orientation with Wings}
+    %label always in the end
+    \label{fig:rear_linkage_wings}
+\end{figure}
+The rear linkage angle starts off at 180° as before but then turns clockwise.
+\clearpage
+\textbf{Wings Conclusion}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.35]{images/end_position_wings.jpg}
+    \caption{End Pose Car with Wings}
+    %label always in the end
+    \label{fig:end_position_wings}
+\end{figure}
+Looking at the last state of the generalized coordinates we can see the car in a tilted state. From the additional drag force from the wings the car seems to turn in a clockwise motion.
+\subsection{Harmonic Response}
 

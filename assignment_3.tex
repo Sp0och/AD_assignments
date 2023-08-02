@@ -1,6 +1,6 @@
 A few notes before starting this assignment:
 
-I'm considering three frames. 
+I'm considering four frames. 
 
 The first one is the inertial frame. It is in A with the first axis straight up, the second right and the third into the plane of the image.
 
@@ -23,7 +23,7 @@ The first one is the inertial frame. It is in A with the first axis straight up,
 \end{figure}
 \clearpage %HERE
 
-The third one that is called rod frame is the same as the vertical frame but with a constant rotation of $\beta$ around the negative $e3_v$ axis.
+The third one, that is called rod frame is located in the point B and relative to the vertical frame it is tilted by $\beta$ around the positive $e_3^v$ axis.
 
 \begin{figure}[ht]
     \centering
@@ -46,11 +46,11 @@ The last frame is the square frame which relative to the rod frame is also rotat
 
 \subsection{Kinetic and Potential Energy}
 \subsubsection{Vertical Shaft}
-As the vertical bar rotates around the thing axis and is static regarding the height of it's CoM the contribution to the energ is 0.
+As the vertical bar rotates around the thin axis and is static regarding the height of it's CoM the contribution to the energy is 0.
 
 \begin{equation}
     \begin{split}
-        T_\text{vertical bar} = V_\text{vertical bar} = 0
+        T_\text{vertical bar} =  V_\text{vertical bar} = 0
     \end{split}
 \end{equation}
 \subsubsection{Horizontal Bar}
@@ -499,22 +499,23 @@ Trying to solve this equation yielded no solution for $\phi_{eq}$. This can be i
 
 \subsection{Integration}
 
-To integrate the system w.r.t. time the idea is to 
-\begin{enumerate}
-    \item Get the linearized equations $M\ddot {\tilde {q}} + D\dot {\tilde {q}} + K\tilde {q} = 0$, \\
-    Where $\tilde q$ defines a small perturbation of the generalized coordinates from the equilibrium configuration.
-    \item Build the state space representation $Ar + B\dot r = s$,\\
-    Where $r = \begin{pmatrix}
-        \tilde {q}\\
-        \dot {\tilde {q}}
-    \end{pmatrix}$, $A = \begin{pmatrix}
-        K & 0\\
-        0 & -M
-    \end{pmatrix}$, $B = \begin{pmatrix}
-        D & M\\
-        M & 0
-    \end{pmatrix}$ and $s = \begin{pmatrix}
-        F\\0
-    \end{pmatrix}$
-    \item Use standart solution $r = Ze^{\lambda t} \Rightarrow Ar + \lambda B r = 0$ 
-\end{enumerate}
+% To integrate the system w.r.t. time the idea is to 
+% \begin{enumerate}
+%     \item Get the linearized equations $M\ddot {\tilde {q}} + D\dot {\tilde {q}} + K\tilde {q} = 0$, \\
+%     Where $\tilde q$ defines a small perturbation of the generalized coordinates from the equilibrium configuration.
+%     \item Build the state space representation $Ar + B\dot r = s$,\\
+%     Where $r = \begin{pmatrix}
+%         \tilde {q}\\
+%         \dot {\tilde {q}}
+%     \end{pmatrix}$, $A = \begin{pmatrix}
+%         K & 0\\
+%         0 & -M
+%     \end{pmatrix}$, $B = \begin{pmatrix}
+%         D & M\\
+%         M & 0
+%     \end{pmatrix}$ and $s = \begin{pmatrix}
+%         F\\0
+%     \end{pmatrix}$
+%     \item Use standart solution $r = Ze^{\lambda t} \Rightarrow Ar + \lambda B r = 0$ 
+% \end{enumerate}
+To integrate the system w.r.t. time the idea is to use the state space representation of the linearized EoM. Then one can use the numerical ode45 function of matlab to get the result. What I am confused about at the point of writing this report is, why in the implementation for the formula student car the state space representation was described without a contribution of the stiffness matrix.
