@@ -423,7 +423,7 @@ Or for the case of a free rotation around A:
 
 And as can be seen the above equation (\ref{eq:3.6.4}) can be read as:
 
-\begin{equation}\label{eq:3.6.4}
+\begin{equation}\label{eq:3.6.5}
     \begin{split}
         \begin{pmatrix}
             A\sin(\phi_{\text{eq}})\\0
@@ -499,23 +499,82 @@ Trying to solve this equation yielded no solution for $\phi_{eq}$. This can be i
 
 \subsection{Integration}
 
-% To integrate the system w.r.t. time the idea is to 
-% \begin{enumerate}
-%     \item Get the linearized equations $M\ddot {\tilde {q}} + D\dot {\tilde {q}} + K\tilde {q} = 0$, \\
-%     Where $\tilde q$ defines a small perturbation of the generalized coordinates from the equilibrium configuration.
-%     \item Build the state space representation $Ar + B\dot r = s$,\\
-%     Where $r = \begin{pmatrix}
-%         \tilde {q}\\
-%         \dot {\tilde {q}}
-%     \end{pmatrix}$, $A = \begin{pmatrix}
-%         K & 0\\
-%         0 & -M
-%     \end{pmatrix}$, $B = \begin{pmatrix}
-%         D & M\\
-%         M & 0
-%     \end{pmatrix}$ and $s = \begin{pmatrix}
-%         F\\0
-%     \end{pmatrix}$
-%     \item Use standart solution $r = Ze^{\lambda t} \Rightarrow Ar + \lambda B r = 0$ 
-% \end{enumerate}
-To integrate the system w.r.t. time the idea is to use the state space representation of the linearized EoM. Then one can use the numerical ode45 function of matlab to get the result. What I am confused about at the point of writing this report is, why in the implementation for the formula student car the state space representation was described without a contribution of the stiffness matrix.
+To perform the time integration of the state space representation we use the same approach as given in the car exercise. Aka we say that:
+\begin{equation}
+    \begin{split}
+        \begin{bmatrix}
+            M(q) & 0 \\
+            0 I
+        \end{bmatrix}\begin{bmatrix}
+            \ddot q\\\dot q
+        \end{bmatrix} = \begin{bmatrix}
+            f\\\dot q
+        \end{bmatrix}
+    \end{split}
+\end{equation}
+
+The result of this time integration for iniitial conditions of:
+\begin{equation}
+    \begin{split}
+        \begin{pmatrix}
+            \dot \phi\\
+            \dot \theta\\
+            \phi\\
+            \theta
+        \end{pmatrix} = \begin{pmatrix}
+            5 s^{-1}\\
+            0\\
+            0\\
+            0
+        \end{pmatrix}
+    \end{split}
+\end{equation}
+
+is the following for phi:
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.5]{images/phid_case_1.jpg}
+    \caption{$\dot\phi$ for initial rotation of the square plate}
+    \label{fig:phid_case1}
+\end{figure}
+and this for theta:
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.5]{images/thetad_case_1.jpg}
+    \caption{$\dot\theta$ for initial rotation of the square plate}
+    \label{fig:thetad_case1}
+\end{figure}
+
+And for the second initial conditions of exciting the theta around the vertical shaft:
+
+
+\begin{equation}
+    \begin{split}
+        \begin{pmatrix}
+            \dot \phi\\
+            \dot \theta\\
+            \phi\\
+            \theta
+        \end{pmatrix} = \begin{pmatrix}
+            0\\
+            5 s^{-1}\\
+            0\\
+            0
+        \end{pmatrix}
+    \end{split}
+\end{equation}
+
+we get for phi:
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.5]{images/phid_case_2.jpg}
+    \caption{$\dot\phi$ for initial rotation of the vertical shaft}
+    \label{fig:phid_case2}
+\end{figure}
+and for theta:
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.5]{images/thetad_case_2.jpg}
+    \caption{$\dot\theta$ for initial rotation of the vertical shaft}
+    \label{fig:thetad_case2}
+\end{figure}
