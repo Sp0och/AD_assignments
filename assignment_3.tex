@@ -140,7 +140,7 @@ For the potential energy we get:
     \end{split}
 \end{equation}
 
-Which are the contributions of the vertical parts of the two vectors of length $\frac{L}{2}$ to the center of mass of the square in the s frame. The sin part points up (to c.o.m of the rod) and the cos part points down.
+Which can be seen as the contribution of the axis-parallel parts of the vector to the center of mass of the square in the s frame. The sin part points up (to c.o.m of the rod) and the cos part points down.
 
 \subsubsection{Total Energy}
 The total kinetic energy comes to:
@@ -512,6 +512,7 @@ To perform the time integration of the state space representation we use the sam
         \end{bmatrix}
     \end{split}
 \end{equation}
+Where $f = -(\text{equations of motion} - M(q)\ddot q)$
 
 The result of this time integration for iniitial conditions of:
 \begin{equation}
@@ -522,29 +523,35 @@ The result of this time integration for iniitial conditions of:
             \phi\\
             \theta
         \end{pmatrix} = \begin{pmatrix}
-            5 s^{-1}\\
+            \pi /s\\
             0\\
             0\\
             0
         \end{pmatrix}
     \end{split}
 \end{equation}
+\clearpage %HERE
 
 is the following for phi:
 \begin{figure}[ht]
     \centering
-    \includegraphics[scale=0.5]{images/phid_case_1.jpg}
+    \includegraphics[scale=0.35]{images/phid_case_1.jpg}
     \caption{$\dot\phi$ for initial rotation of the square plate}
     \label{fig:phid_case1}
 \end{figure}
+\clearpage %HERE
 and this for theta:
 \begin{figure}[ht]
     \centering
-    \includegraphics[scale=0.5]{images/thetad_case_1.jpg}
+    \includegraphics[scale=0.35]{images/thetad_case_1.jpg}
     \caption{$\dot\theta$ for initial rotation of the square plate}
     \label{fig:thetad_case1}
 \end{figure}
 
+\textbf{Interpretation:}
+
+With initial conditions of only a phi rotation we get an induced angular momentum in the system which has to be compensated by the angular momentum around the vertical shaft. Therefore we get a precession around the vertical shaft. The induced precession in turn leads to a rotation of the square plate in the opposite direction and so on. This highly oscillatory movement can be seen in figures \ref{fig:phid_case1} and \ref{fig:thetad_case1}. Also it can be noted that the amplitude of the oscillation diminishes for both rotations. This is due to the drag forces on the square plate.
+\clearpage %HERE
 And for the second initial conditions of exciting the theta around the vertical shaft:
 
 
@@ -557,7 +564,7 @@ And for the second initial conditions of exciting the theta around the vertical 
             \theta
         \end{pmatrix} = \begin{pmatrix}
             0\\
-            5 s^{-1}\\
+            \pi /s\\
             0\\
             0
         \end{pmatrix}
@@ -567,14 +574,29 @@ And for the second initial conditions of exciting the theta around the vertical 
 we get for phi:
 \begin{figure}[ht]
     \centering
-    \includegraphics[scale=0.5]{images/phid_case_2.jpg}
+    \includegraphics[scale=0.35]{images/phid_case_2.jpg}
     \caption{$\dot\phi$ for initial rotation of the vertical shaft}
     \label{fig:phid_case2}
 \end{figure}
+\clearpage %HERE
 and for theta:
 \begin{figure}[ht]
     \centering
-    \includegraphics[scale=0.5]{images/thetad_case_2.jpg}
+    \includegraphics[scale=0.35]{images/thetad_case_2.jpg}
     \caption{$\dot\theta$ for initial rotation of the vertical shaft}
     \label{fig:thetad_case2}
 \end{figure}
+
+\textbf{Interpretation}
+
+Here we have a smooth rotation of the system around the vertical shaft. The angular velocity of theta goes towards 0 as can be seen in figure \ref{fig:thetad_case2} this is of course again due to the drag force acting on the smoothly rotating system. The angular velocity of the square plate is again oscillatory but with very small magnitudes. This is the case because the square plate tries to find it's equilibrium position during the rotation around the vertical shaft but can't as the drag force pusheds the plate up and gravity pulls it down and $\dot\theta$ is diminishing so the equilibrium always changes aka there is no equilibrium. In the end this looks like a rotation around the vertical shaft with a tilted square plate that wobbles in the wind. 
+
+To proof this we can also plot the angle of the square plate over time:
+\clearpage %HERE
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.35]{images/phi_case_2.jpg}
+    \caption{$\phi$ for initial rotation of the vertical shaft}
+    \label{fig:phi_case_2}
+\end{figure}
+And as expected we have very tiny fluctuations (range 1e-4) of the $\phi$ angle.
